@@ -23,7 +23,7 @@
   {% endif %}
 
   <meta name="google-site-verification" content="FDTL2atCul0wFSODHGhTc2uhgntW2f43w2PItgSnKJU" />
-
+  
   <!-- Global site tag (gtag.js) - Google Ads: 798093218 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-798093218"></script>
   <script>
@@ -47,7 +47,7 @@
   <!-- End of global snippet: Please do not remove -->
 
   <script type="text/javascript" src="https://track.adform.net/serving/scripts/trackpoint/"></script>
-
+  
   <title>
     {{ langify_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {% comment %}ly_i18n_replace_for_[ 'general.meta.tags' | t: tags: meta_tags ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.meta.tags' | t: tags: meta_tags }}{% endcapture %}{% include 'ly-static-string' with '11859607' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = meta_tags  %}{% assign ly_template = ly_template | replace: '[[tags]]', replacement %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}{% endif %}{% if current_page != 1 %} &ndash; {% comment %}ly_i18n_replace_for_[ 'general.meta.page' | t: page: current_page ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.meta.page' | t: page: current_page }}{% endcapture %}{% include 'ly-static-string' with '11859609' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = current_page  %}{% assign ly_template = ly_template | replace: '[[page]]', replacement %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}{% endif %}{% unless langify_title contains langify_shop_name %} &ndash; {{ langify_shop_name }}{% endunless %}
   </title>
@@ -133,6 +133,6 @@
 
   {% include 'cart-drawer' %}
 
-{% comment %}ly_static_code_begin{% endcomment %}{% include 'ly-languages' %}{% comment %}ly_static_code_end{% endcomment %}{% include 'currencies' %}</body>
+{% comment %}ly_static_code_begin{% endcomment %}{% include 'ly-languages' %}{% comment %}ly_static_code_end{% endcomment %}</body>
 </html>
 {% comment %}ly_static_code_begin{% endcomment %}{% endcapture %}{% include 'ly-static' with ly_content %}{% comment %}ly_static_code_end{% endcomment %}
