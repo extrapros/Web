@@ -1,4 +1,4 @@
-<div class="rich-text rich-text--{{ section.id }} {{ section.settings.custom_css }} {% if section.settings.special_color != 1 %} special-color {% endif %}">
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<div class="rich-text rich-text--{{ section.id }} {{ section.settings.custom_css }} {% if section.settings.special_color != 1 %} special-color {% endif %}">
   <div class="grid page-width">
     <div class="grid__item text-center{% unless section.settings.full_width %} medium-up--two-thirds medium-up--push-one-sixth{% endunless %}">
       {% if section.settings.section_title != blank %}

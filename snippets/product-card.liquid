@@ -1,4 +1,4 @@
-<div class="card critical-clear" id="Card-{{ product.id }}" data-animate>
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<div class="card critical-clear" id="Card-{{ product.id }}" data-animate>
   <a href="{{ product.url | within: collection }}" class="card__wrapper{% if section.settings.show_spacing %} card__wrapper--padding{% endif %} text-center">
 
     {% if product.featured_image %}
@@ -7,10 +7,10 @@
 
     <div class="card__info{% if grid_style == 'grid' %} card__info--aligned{% endif %}">
       {% if section.settings.show_vendor %}
-        <div class="card__brand">{{ product.vendor }}</div>
+        <div class="card__brand">{% comment %}ly_code_replace_for_[ product.vendor ]_begin{% endcomment %}{% include 'ly-vendor' with product %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}</div>
       {% endif %}
 
-      <h3 class="card__name h4">{{ product.title }}</h3>
+      <h3 class="card__name h4">{% comment %}ly_code_replace_for_[ product.title ]_begin{% endcomment %}{% include 'ly-title' with product %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}</h3>
 
       {% if product.available %}
         <div class="card__price">
@@ -20,13 +20,13 @@
             {% endcomment %}
             {% if product.price_varies %}
               {% assign sale_price = product.price | money_without_trailing_zeros %}
-              <span class="visually-hidden"> {{ 'products.product.price' | t }} </span>
-              {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+              <span class="visually-hidden"> {% comment %}ly_i18n_replace_for_[ 'products.product.price' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.price' | t }}{% endcapture %}{% include 'ly-static-string' with '11860006' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %} </span>
+              {% comment %}ly_i18n_replace_for_[ 'products.product.on_sale_from_html' | t: price: sale_price ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.on_sale_from_html' | t: price: sale_price }}{% endcapture %}{% include 'ly-static-string' with '11860008' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = sale_price  %}{% assign ly_template = ly_template | replace: '[[price]]', replacement %}{% if escape_content %}{{ ly_template}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
             {% else %}
-              <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
+              <span class="visually-hidden">{% comment %}ly_i18n_replace_for_[ 'products.product.sale_price' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.sale_price' | t }}{% endcapture %}{% include 'ly-static-string' with '11860009' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
               <span class="card__price--sale">{{ product.price | money_without_trailing_zeros }}</span>
 
-              <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+              <span class="visually-hidden">{% comment %}ly_i18n_replace_for_[ 'products.product.regular_price' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.regular_price' | t }}{% endcapture %}{% include 'ly-static-string' with '11860010' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
               <span class="card__price--regular-strike">
                 <span class="card__price--regular">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
               </span>
@@ -38,7 +38,7 @@
             {% endcomment %}
             {% if product.price_varies %}
               {% assign price = product.price | money_without_trailing_zeros %}
-              {{ 'products.product.from_text_html' | t: price: price }}
+              {% comment %}ly_i18n_replace_for_[ 'products.product.from_text_html' | t: price: price ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.from_text_html' | t: price: price }}{% endcapture %}{% include 'ly-static-string' with '11860012' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = price  %}{% assign ly_template = ly_template | replace: '[[price]]', replacement %}{% if escape_content %}{{ ly_template}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
             {% else %}
               {{ product.price | money_without_trailing_zeros }}
             {% endif %}
@@ -46,14 +46,14 @@
         </div>
       {% else %}
         <div class="card__availability">
-          {{ 'products.product.sold_out' | t }}
+          {% comment %}ly_i18n_replace_for_[ 'products.product.sold_out' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.sold_out' | t }}{% endcapture %}{% include 'ly-static-string' with '11860013' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
         </div>
       {% endif %}
     </div>
     {% if product.compare_at_price > product.price %}
       {% assign sale_text_length = 'products.product.on_sale' | t | size %}
       <span class="card__badge{% if sale_text_length > 6 %} card__badge--large{% endif %}">
-        {{ 'products.product.on_sale' | t }}
+        {% comment %}ly_i18n_replace_for_[ 'products.product.on_sale' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.on_sale' | t }}{% endcapture %}{% include 'ly-static-string' with '11860014' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
       </span>
     {% endif %}
   </a>

@@ -1,4 +1,4 @@
-<div class="card critical-clear" data-animate>
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<div class="card critical-clear" data-animate>
   <a href="{{ article.url }}" class="card__wrapper card--article">
     {% if article.image %}
       {% assign article_image = article.image %}
@@ -35,18 +35,18 @@
           {{ article.author }}
         </span>
       {% endif %}
-      <h2 class="card__name h4">{{ article.title }}</h2>
+      <h2 class="card__name h4">{% comment %}ly_code_replace_for_[ article.title ]_begin{% endcomment %}{% include 'ly-title' with article %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}</h2>
       {% if section.settings.blog_show_excerpt %}
         <div class="card__excerpt rte">
           {% if article.excerpt.size > 0 %}
-            {{ article.excerpt }}
+            {% comment %}ly_code_replace_for_[ article.excerpt ]_begin{% endcomment %}{% include 'ly-excerpt' with article %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}
           {% else %}
-            {{ article.content | strip_html | truncatewords: 30 }}
+            {% comment %}ly_code_replace_for_[ article.content | strip_html | truncatewords: 30 ]_begin{% endcomment %}{% include 'ly-content' with article %}{{ ly_translation | strip_html | truncatewords: 30 }}{% comment %}ly_code_replace_end{% endcomment %}
           {% endif %}
         </div>
       {% endif %}
       <span class="card__read-more">
-        {{ 'blogs.article.read_more' | t }}
+        {% comment %}ly_i18n_replace_for_[ 'blogs.article.read_more' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.article.read_more' | t }}{% endcapture %}{% include 'ly-static-string' with '11859787' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
         {% include 'icon-arrow-right' %}
       </span>
     </div>

@@ -1,4 +1,4 @@
-<!-- /snippets/comment.liquid -->
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<!-- /snippets/comment.liquid -->
 <div id="{{ comment.id }}" class="comment grid__item">
   <div class="grid">
     <div class="grid__item medium-up--two-twelfths medium-up--push-one-twelfth comment__meta--large">
@@ -13,7 +13,7 @@
 
     <div class="grid__item medium-up--seven-twelfths medium-up--push-two-twelfths comment__content--large">
       <div class="comment__content text-small rte">
-        {{ comment.content }}
+        {% comment %}ly_code_replace_for_[ comment.content ]_begin{% endcomment %}{% include 'ly-content' with comment %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}
       </div>
     </div>
   </div>

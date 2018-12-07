@@ -1,4 +1,4 @@
-{%- assign social_icons = false -%}
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}{%- assign social_icons = false -%}
 {%- assign menu_enabled = false -%}
 
 {% if
@@ -34,7 +34,7 @@
               <ul class="site-footer__linklist">
                 {% for link in linklists[link_list].links %}
                   <li class="site-footer__linklist-item h6">
-                    <a href="{{ link.url }}">{{ link.title }}</a>
+                    <a href="{{ link.url }}">{% comment %}ly_code_replace_for_[ link.title ]_begin{% endcomment %}{% include 'ly-title' with link %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}</a>
                   </li>
                 {% endfor %}
               </ul>
@@ -49,7 +49,7 @@
                 <input type="hidden" name="contact[tags]" value="newsletter">
                 <label for="NewsletterEmail" class="site-footer__newsletter-label">{{ section.settings.newsletter_heading }}</label>
                 <div class="input-group--underline">
-                  <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter_form.newsletter_placeholder' | t }}" name="contact[email]" id="NewsletterEmail" class="input-group__field site-footer__newsletter-input" aria-label="{{ 'general.newsletter_form.newsletter_placeholder' | t }}" autocorrect="off" autocapitalize="off">
+                  <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{% comment %}ly_i18n_replace_for_[ 'general.newsletter_form.newsletter_placeholder' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.newsletter_form.newsletter_placeholder' | t }}{% endcapture %}{% include 'ly-static-string' with '11859691' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}" name="contact[email]" id="NewsletterEmail" class="input-group__field site-footer__newsletter-input" aria-label="{% comment %}ly_i18n_replace_for_[ 'general.newsletter_form.newsletter_placeholder' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.newsletter_form.newsletter_placeholder' | t }}{% endcapture %}{% include 'ly-static-string' with '11859691' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}" autocorrect="off" autocapitalize="off">
                   <div class="input-group__btn">
                     <input type="submit" class="btn btn--clear" value="{{ section.settings.newsletter_button }}" name="subscribe" id="Subscribe">
                   </div>
@@ -57,7 +57,7 @@
                 <span class="newsletter-sub-heading">{{ section.settings.newsletter_subheading}}</span>
                 <div class="site-footer__newsletter-message" aria-role="alert">
                   {% if form.posted_successfully? %}
-                    <p class="form-success" aria-role="alert">{{ 'general.newsletter_form.confirmation' | t }}</p>
+                    <p class="form-success" aria-role="alert">{% comment %}ly_i18n_replace_for_[ 'general.newsletter_form.confirmation' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.newsletter_form.confirmation' | t }}{% endcapture %}{% include 'ly-static-string' with '11859692' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</p>
                   {% endif %}
                   {{ form.errors | default_errors }}</div>
               {% endform %}
@@ -75,7 +75,7 @@
       {% endif %}
 
       <div class="site-footer__copyright flex-footer__item--one-third">
-        <small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}.</small>
+        <small>{% comment %}ly_i18n_replace_for_[ 'layout.footer.copyright' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'layout.footer.copyright' | t }}{% endcapture %}{% include 'ly-static-string' with '11859693' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %} &copy; {{ 'now' | date: "%Y" }}, {{ langify_shop_name | link_to: '/' }}.</small>
         {% comment %}<small class="site-footer__powered-by">{{ powered_by_link }}</small>{% endcomment %}
       </div>
 

@@ -1,4 +1,4 @@
-<div class="collection-list collection-list--{{ section.id }}">
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<div class="collection-list collection-list--{{ section.id }}">
 
   <div class="page-width">
     {% if section.settings.title != blank %}
@@ -30,9 +30,9 @@
 
         {% if collection == empty %}
           {% comment %}add default state for collection block in storefront editor{% endcomment %}
-          {% capture collection_title %}{{ 'homepage.onboarding.collection_title' | t }}{% endcapture %}
+          {% capture collection_title %}{% comment %}ly_i18n_replace_for_[ 'homepage.onboarding.collection_title' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'homepage.onboarding.collection_title' | t }}{% endcapture %}{% include 'ly-static-string' with '11859645' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}{% endcapture %}
         {% else %}
-          {% capture collection_title %}{{ collection.title | escape }}{% endcapture %}
+          {% capture collection_title %}{% comment %}ly_code_replace_for_[ collection.title | escape ]_begin{% endcomment %}{% include 'ly-title' with collection %}{{ ly_translation | escape }}{% comment %}ly_code_replace_end{% endcomment %}{% endcapture %}
         {% endif %}
 
         {% if collection.image %}

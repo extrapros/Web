@@ -1,4 +1,4 @@
-<div class="card critical-clear" data-animate>
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<div class="card critical-clear" data-animate>
   <a href="{{ collection.url }}" class="card__wrapper{% if section.settings.show_spacing %} card__wrapper--padding{% endif %} text-center">
 
     {% if collection.title == blank %}
@@ -19,11 +19,11 @@
     {% endunless %}
 
     <div class="card__info">
-      <h3 class="card__name h4">{% if collection.title != blank %}{{ collection.title }}{% else %}{{ 'homepage.onboarding.collection_title' | t }}{% endif %}</h3>
+      <h3 class="card__name h4">{% if collection.title != blank %}{% comment %}ly_code_replace_for_[ collection.title ]_begin{% endcomment %}{% include 'ly-title' with collection %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}{% else %}{% comment %}ly_i18n_replace_for_[ 'homepage.onboarding.collection_title' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'homepage.onboarding.collection_title' | t }}{% endcapture %}{% include 'ly-static-string' with '11859785' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}{% endif %}</h3>
 
       {% if section.settings.show_description and collection.description != blank %}
         <div class="rte card__description{% if width == '2' %} card__description--padding{% endif %}">
-          {{ collection.description | strip_html | truncatewords: 15 }}
+          {% comment %}ly_code_replace_for_[ collection.description | strip_html | truncatewords: 15 ]_begin{% endcomment %}{% include 'ly-description' with collection %}{{ ly_translation | strip_html | truncatewords: 15 }}{% comment %}ly_code_replace_end{% endcomment %}
         </div>
       {% endif %}
     </div>

@@ -1,4 +1,4 @@
-{% comment %}
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}{% comment %}
 Handles the async loading of our main style sheet. Also creates a global
 `onloadCSS` function that can be used to detect when the stylesheet has loaded.
 {% endcomment %}
@@ -7,8 +7,8 @@ Handles the async loading of our main style sheet. Also creates a global
 Preload our main stylesheet so that we can start downloading ASAP. However, this
 does not apply the stylesheet to the page.
 {% endcomment %}
-<link title="theme" rel="preload" href="{{ 'theme.scss.css' | asset_url }}" as="style">
-<noscript><link rel="stylesheet" href="{{ 'theme.scss.css' | asset_url }}"></noscript>
+<link title="theme" rel="preload" href="{% comment %}ly_asset_replace_for_[ 'theme.scss.css' | asset_url ]_begin{% endcomment %}{% assign ly_asset = 'theme.scss.css' %}{% include 'ly-asset' with ly_asset %}{{ ly_translation  }}{% comment %}ly_asset_replace_end{% endcomment %}" as="style">
+<noscript><link rel="stylesheet" href="{% comment %}ly_asset_replace_for_[ 'theme.scss.css' | asset_url ]_begin{% endcomment %}{% assign ly_asset = 'theme.scss.css' %}{% include 'ly-asset' with ly_asset %}{{ ly_translation  }}{% comment %}ly_asset_replace_end{% endcomment %}"></noscript>
 
 <script>
 /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
@@ -17,8 +17,8 @@ does not apply the stylesheet to the page.
 function onloadCSS(a,b){function c(){!d&&b&&(d=!0,b.call(a))}var d;a.addEventListener&&a.addEventListener("load",c),a.attachEvent&&a.attachEvent("onload",c),"isApplicationInstalled"in navigator&&"onloadcssdefined"in a&&a.onloadcssdefined(c)}
 
 // Insert our stylesheet before our preload <link> tag
-var preload = document.querySelector('link[href="{{ 'theme.scss.css' | asset_url }}"]');
-var stylesheet = loadCSS('{{ 'theme.scss.css' | asset_url }}', preload);
+var preload = document.querySelector('link[href="{% comment %}ly_asset_replace_for_[ 'theme.scss.css' | asset_url ]_begin{% endcomment %}{% assign ly_asset = 'theme.scss.css' %}{% include 'ly-asset' with ly_asset %}{{ ly_translation  }}{% comment %}ly_asset_replace_end{% endcomment %}"]');
+var stylesheet = loadCSS('{% comment %}ly_asset_replace_for_[ 'theme.scss.css' | asset_url ]_begin{% endcomment %}{% assign ly_asset = 'theme.scss.css' %}{% include 'ly-asset' with ly_asset %}{{ ly_translation  }}{% comment %}ly_asset_replace_end{% endcomment %}', preload);
 // Create a property to easily detect if the stylesheet is done loading
 onloadCSS(stylesheet, function() { stylesheet.loaded = true; });
 </script>

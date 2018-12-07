@@ -1,4 +1,4 @@
-<!-- /templates/article.liquid -->
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<!-- /templates/article.liquid -->
 {% comment %}
   Comments will not appear right after they are submitted, either to be checked for spam
   or to await moderation. When a comment is submitted, the browser is redirected to a page
@@ -24,7 +24,7 @@
       <div class="page-width">
         <div class="grid">
           <div class="grid__item medium-up--push-one-twelfth">
-            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+            <h3 class="h4">{% comment %}ly_i18n_replace_for_[ 'blogs.comments.with_count' | t: count: number_of_comments ]_begin{% endcomment %}{% if number_of_comments  == 0 %}{% capture ly_template %}{{ 'blogs.comments.with_count' | t: count: number_of_comments }}{% endcapture %}{% include 'ly-static-string' with '11860041' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = number_of_comments  %}{% assign ly_template = ly_template | replace: '[[count]]', replacement %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% elsif number_of_comments  == 1 %}{% capture ly_template %}{{ 'blogs.comments.with_count' | t: count: number_of_comments }}{% endcapture %}{% include 'ly-static-string' with '11860040' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = number_of_comments  %}{% assign ly_template = ly_template | replace: '[[count]]', replacement %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% elsif number_of_comments  == 2 %}{% capture ly_template %}{{ 'blogs.comments.with_count' | t: count: number_of_comments }}{% endcapture %}{% include 'ly-static-string' with '11860041' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = number_of_comments  %}{% assign ly_template = ly_template | replace: '[[count]]', replacement %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% else %}{% capture ly_template %}{{ 'blogs.comments.with_count' | t: count: number_of_comments }}{% endcapture %}{% include 'ly-static-string' with '11860041' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = number_of_comments  %}{% assign ly_template = ly_template | replace: '[[count]]', replacement %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</h3>
           </div>
         </div>
 
@@ -39,9 +39,9 @@
               <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
                 <div class="form-success form-success--comment">
                   {% if blog.moderated? and comment.status != 'published' %}
-                    {{ 'blogs.comments.success_moderated' | t }}
+                    {% comment %}ly_i18n_replace_for_[ 'blogs.comments.success_moderated' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.comments.success_moderated' | t }}{% endcapture %}{% include 'ly-static-string' with '11860044' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
                   {% else %}
-                    {{ 'blogs.comments.success' | t }}
+                    {% comment %}ly_i18n_replace_for_[ 'blogs.comments.success' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.comments.success' | t }}{% endcapture %}{% include 'ly-static-string' with '11860045' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
                   {% endif %}
                 </div>
               </div>
@@ -73,7 +73,7 @@
       <div class="page-width">
         <div class="grid">
           <div class="grid__item medium-up--push-one-twelfth">
-            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+            <h3 class="comments-form__title h4">{% comment %}ly_i18n_replace_for_[ 'blogs.comments.title' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.comments.title' | t }}{% endcapture %}{% include 'ly-static-string' with '11860046' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</h3>
           </div>
 
           {% form 'new_comment', article %}
@@ -83,29 +83,29 @@
             </div>
 
             <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
-              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
-              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+              <label for="CommentAuthor" class="label--hidden">{% comment %}ly_i18n_replace_for_[ 'blogs.comments.name' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.comments.name' | t }}{% endcapture %}{% include 'ly-static-string' with '11860047' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{% comment %}ly_i18n_replace_for_[ 'blogs.comments.name' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.comments.name' | t }}{% endcapture %}{% include 'ly-static-string' with '11860047' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}" value="{{ form.author }}">
             </div>
 
             <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
-              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
-              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+              <label for="CommentEmail" class="label--hidden">{% comment %}ly_i18n_replace_for_[ 'blogs.comments.email' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.comments.email' | t }}{% endcapture %}{% include 'ly-static-string' with '11860048' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{% comment %}ly_i18n_replace_for_[ 'blogs.comments.email' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.comments.email' | t }}{% endcapture %}{% include 'ly-static-string' with '11860048' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
             </div>
 
             <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
-              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
-              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+              <label for="CommentBody" class="label--hidden">{% comment %}ly_i18n_replace_for_[ 'blogs.comments.message' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.comments.message' | t }}{% endcapture %}{% include 'ly-static-string' with '11860049' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{% comment %}ly_i18n_replace_for_[ 'blogs.comments.message' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.comments.message' | t }}{% endcapture %}{% include 'ly-static-string' with '11860049' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}">{{ form.body }}</textarea>
             </div>
 
             <div class="grid__item medium-up--push-one-twelfth">
-              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+              <input type="submit" class="btn btn--input" value="{% comment %}ly_i18n_replace_for_[ 'blogs.comments.post' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.comments.post' | t }}{% endcapture %}{% include 'ly-static-string' with '11860050' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}">
             </div>
 
           {% endform %}
 
           {% if blog.moderated? %}
             <div class="grid__item medium-up--push-one-twelfth">
-              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+              <p class="comments__moderated text-small">{% comment %}ly_i18n_replace_for_[ 'blogs.comments.moderated' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.comments.moderated' | t }}{% endcapture %}{% include 'ly-static-string' with '11860051' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</p>
             </div>
           {% endif %}
         </div>

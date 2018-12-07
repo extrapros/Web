@@ -1,4 +1,4 @@
-{% if section.settings.enable_transparent and template.name == 'index' %}
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}{% if section.settings.enable_transparent and template.name == 'index' %}
   <style>
     html:not(.supports-no-js) body:not(.navigation-open) .site-header--transparent:not(.site-header--fixed) .burger-icon {
       background-color: {{ section.settings.transparent_text_color }};
@@ -76,7 +76,7 @@
           <span class="burger-icon burger-icon--top"></span>
           <span class="burger-icon burger-icon--mid"></span>
           <span class="burger-icon burger-icon--bottom"></span>
-          <span class="icon__fallback-text">{{ 'general.header.expand_navigation' | t }}</span>
+          <span class="icon__fallback-text">{% comment %}ly_i18n_replace_for_[ 'general.header.expand_navigation' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.header.expand_navigation' | t }}{% endcapture %}{% include 'ly-static-string' with '11859706' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
         </button>
       </div>
       <div class="site-header__section site-header__section--title">
@@ -100,7 +100,7 @@
               }
             </style>
 
-            <img class="site-header__logo-image" src="{{ section.settings.logo | img_url: image_size }}" srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
+            <img class="site-header__logo-image" src="{{ section.settings.logo | img_url: image_size }}" srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x" alt="{{ section.settings.logo.alt | default: langify_shop_name }}" itemprop="logo">
 
             {% if template.name == 'index' and section.settings.enable_transparent %}
               {% if section.settings.transparent_logo == blank %}
@@ -109,11 +109,11 @@
                 {%- assign transparent_logo = section.settings.transparent_logo -%}
               {% endif %}
 
-              <img class="site-header__logo-image site-header__logo-image--transparent" src="{{ transparent_logo | img_url: image_size }}" srcset="{{ transparent_logo | img_url: image_size }} 1x, {{ transparent_logo | img_url: image_size, scale: 2 }} 2x" alt="{{ section.settings.logo.alt | default: shop.name }}"
+              <img class="site-header__logo-image site-header__logo-image--transparent" src="{{ transparent_logo | img_url: image_size }}" srcset="{{ transparent_logo | img_url: image_size }} 1x, {{ transparent_logo | img_url: image_size, scale: 2 }} 2x" alt="{{ section.settings.logo.alt | default: langify_shop_name }}"
                       itemprop="logo">
             {% endif %}
           {% else %}
-            {{ shop.name }}
+            {{ langify_shop_name }}
           {% endif %}
         </a>
 
@@ -127,7 +127,7 @@
         <a href="/cart" class="btn btn--clear btn--square btn--hover-scale site-header__cart ajax-cart__toggle" aria-expanded="false">
           {%- assign icon = 'icon-header-' | append: section.settings.icon %}
           {% include icon %}
-          <span class="icon__fallback-text">{{ 'general.header.view_cart' | t }}</span>
+          <span class="icon__fallback-text">{% comment %}ly_i18n_replace_for_[ 'general.header.view_cart' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.header.view_cart' | t }}{% endcapture %}{% include 'ly-static-string' with '11859707' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
           <span class="site-header__cart-bubble{% if cart.item_count > 0 %} site-header__cart-bubble--visible{% endif %}"></span>
         </a>
       </div>
@@ -142,8 +142,8 @@
           {% if link.links != blank %}
             <li class="navigation__link navigation__has-sublinks navigation__has-sublinks--collapsed navigation__entrance-animation">
               <button class="navigation__expand-sublinks" aria-expanded="{% if link.active %}true{% else %}false{% endif %}" tabindex="-1">
-                <span aria-hidden="true">{{ link.title }}</span>
-                <span class="visually-hidden">{{ 'general.navigation.toggle_sublinks' | t: link_title: link.title }}</span>
+                <span aria-hidden="true">{% comment %}ly_code_replace_for_[ link.title ]_begin{% endcomment %}{% include 'ly-title' with link %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}</span>
+                <span class="visually-hidden">{% comment %}ly_i18n_replace_for_[ 'general.navigation.toggle_sublinks' | t: link_title: link.title ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.navigation.toggle_sublinks' | t: link_title: link.title }}{% endcapture %}{% include 'ly-static-string' with '11859709' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% include 'ly-title' with link %}{% assign replacement = ly_translation %}{% assign ly_template = ly_template | replace: '[[link_title]]', replacement %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
                 {% include 'icon-arrow-down' %}
               </button>
               <div class="navigation__sublinks-container">
@@ -152,21 +152,21 @@
                     <li class="navigation__sublink{% if childlink.links != blank %} navigation__has-sublinks navigation__has-sublinks--collapsed{% endif %}">
                       {% if childlink.links != blank %}
                         <button class="navigation__expand-sublinks navigation__expand-sublinks--third-level" aria-expanded="{% if link.active %}true{% else %}false{% endif %}" tabindex="-1">
-                          <span aria-hidden="true">{{ childlink.title }}</span>
-                          <span class="visually-hidden">{{ 'general.navigation.toggle_sublinks' | t: link_title: childlink.title }}</span>
+                          <span aria-hidden="true">{% comment %}ly_code_replace_for_[ childlink.title ]_begin{% endcomment %}{% include 'ly-title' with childlink %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}</span>
+                          <span class="visually-hidden">{% comment %}ly_i18n_replace_for_[ 'general.navigation.toggle_sublinks' | t: link_title: childlink.title ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.navigation.toggle_sublinks' | t: link_title: childlink.title }}{% endcapture %}{% include 'ly-static-string' with '11859711' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% include 'ly-title' with childlink %}{% assign replacement = ly_translation %}{% assign ly_template = ly_template | replace: '[[link_title]]', replacement %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
                           {% include 'icon-arrow-down' %}
                         </button>
                         <div class="navigation__sublinks-container">
                           <ul class="navigation__sublinks navigation__sublinks--third-level">
                             {% for grandchildlink in childlink.links %}
                               <li class="navigation__sublink--third-level">
-                                <a href="{{ grandchildlink.url }}"{% if grandchildlink.active %} aria-current="page"{% endif %} tabindex="-1">{{ grandchildlink.title | escape }}</a>
+                                <a href="{{ grandchildlink.url }}"{% if grandchildlink.active %} aria-current="page"{% endif %} tabindex="-1">{% comment %}ly_code_replace_for_[ grandchildlink.title | escape ]_begin{% endcomment %}{% include 'ly-title' with grandchildlink %}{{ ly_translation | escape }}{% comment %}ly_code_replace_end{% endcomment %}</a>
                               </li>
                             {% endfor %}
                           </ul>
                         </div>
                       {% else %}
-                        <a href="{{ childlink.url }}"{% if childlink.active %} aria-current="page"{% endif %} tabindex="-1">{{ childlink.title | escape }}</a>
+                        <a href="{{ childlink.url }}"{% if childlink.active %} aria-current="page"{% endif %} tabindex="-1">{% comment %}ly_code_replace_for_[ childlink.title | escape ]_begin{% endcomment %}{% include 'ly-title' with childlink %}{{ ly_translation | escape }}{% comment %}ly_code_replace_end{% endcomment %}</a>
                       {% endif %}
                     </li>
                   {% endfor %}
@@ -175,7 +175,7 @@
             </li>
           {% else %}
             <li class="navigation__link navigation__entrance-animation{% if link.active %} navigation__link--active{% endif %}">
-              <a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %} tabindex="-1">{{ link.title }}</a>
+              <a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %} tabindex="-1">{% comment %}ly_code_replace_for_[ link.title ]_begin{% endcomment %}{% include 'ly-title' with link %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}</a>
             </li>
           {% endif %}
         {% endfor %}
@@ -187,26 +187,26 @@
             <li class="navigation__link navigation__link--secondary navigation__entrance-animation">
               {% if customer.first_name != blank %}
                 {% capture first_name %}{{ customer.first_name }}{% endcapture %}
-                <a href="/account" tabindex="-1">{{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}</a>
+                <a href="/account" tabindex="-1">{% comment %}ly_i18n_replace_for_[ 'layout.customer.logged_in_as_html' | t: first_name: first_name ]_begin{% endcomment %}{% capture ly_template %}{{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}{% endcapture %}{% include 'ly-static-string' with '11859713' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = first_name  %}{% assign ly_template = ly_template | replace: '[[first_name]]', replacement %}{% if escape_content %}{{ ly_template}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</a>
               {% else %}
-                <a href="/account" tabindex="-1">{{ 'layout.customer.account' | t }}</a>
+                <a href="/account" tabindex="-1">{% comment %}ly_i18n_replace_for_[ 'layout.customer.account' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'layout.customer.account' | t }}{% endcapture %}{% include 'ly-static-string' with '11859714' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</a>
               {% endif %}
             </li>
             <li class="navigation__link navigation__link--secondary navigation__entrance-animation">
-              <a href="/account/logout" tabindex="-1">{{ 'layout.customer.log_out' | t }}</a>
+              <a href="/account/logout" tabindex="-1">{% comment %}ly_i18n_replace_for_[ 'layout.customer.log_out' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'layout.customer.log_out' | t }}{% endcapture %}{% include 'ly-static-string' with '11859715' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</a>
             </li>
           {% else %}
             <li class="navigation__link navigation__link--secondary navigation__entrance-animation">
-              <a href="/account/login" tabindex="-1">{{ 'layout.customer.log_in' | t }}</a>
+              <a href="/account/login" tabindex="-1">{% comment %}ly_i18n_replace_for_[ 'layout.customer.log_in' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'layout.customer.log_in' | t }}{% endcapture %}{% include 'ly-static-string' with '11859716' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</a>
             </li>
             <li class="navigation__link navigation__link--secondary navigation__entrance-animation">
-              <a href="/account/register" tabindex="-1">{{ 'layout.customer.create_account' | t }}</a>
+              <a href="/account/register" tabindex="-1">{% comment %}ly_i18n_replace_for_[ 'layout.customer.create_account' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'layout.customer.create_account' | t }}{% endcapture %}{% include 'ly-static-string' with '11859717' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</a>
             </li>
           {% endif %}
         {% endif %}
         {% for link in linklists[section.settings.secondary_navigation].links %}
           <li class="navigation__link navigation__link--secondary navigation__entrance-animation{% if link.active %} navigation__link--active{% endif %}">
-            <a href="{{ link.url }}" tabindex="-1">{{ link.title }}</a>
+            <a href="{{ link.url }}" tabindex="-1">{% comment %}ly_code_replace_for_[ link.title ]_begin{% endcomment %}{% include 'ly-title' with link %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}</a>
           </li>
         {% endfor %}
       </ul>

@@ -1,4 +1,4 @@
-<style>
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<style>
   body, main#MainContent{ background-color: {{ settings.color_secondary_bg }};}
 </style>
 <div class="page-width custom-section-below">
@@ -8,7 +8,7 @@
   <div class="grid">
     <div class="grid__item medium-up--four-fifths medium-up--push-one-tenth">
       <div class="rte">
-        {{ page.content }}
+        {% comment %}ly_code_replace_for_[ page.content ]_begin{% endcomment %}{% include 'ly-content' with page %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}
       </div>
     </div>
   </div>

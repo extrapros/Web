@@ -1,9 +1,9 @@
-<div class="list-collections-template" data-section-id="{{ section.id }}" data-section-type="list-collections-template">
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<div class="list-collections-template" data-section-id="{{ section.id }}" data-section-type="list-collections-template">
   <div class="page-width">
     <div class="grid text-center">
       <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
         <header class="section-header">
-          <h1 class="section-header__title h2">{{ 'collections.general.all' | t }}</h1>
+          <h1 class="section-header__title h2">{% comment %}ly_i18n_replace_for_[ 'collections.general.all' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'collections.general.all' | t }}{% endcapture %}{% include 'ly-static-string' with '11859721' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</h1>
         </header>
       </div>
     </div>
@@ -12,8 +12,8 @@
     {%- assign mobileColumns = '1' -%}
 
     {%- capture gridClasses -%}
-      {% if desktopColumns == '3' %}medium-up--one-third {% else %}medium-up--one-half {% endif %}
-      {% if mobileColumns == '2' %}small--one-half {% endif %}
+      {% if desktopColumns == '3' %}<ly-as-11859718>medium-up--one-third</ly-as-11859718> {% else %}<ly-as-11859719>medium-up--one-half</ly-as-11859719> {% endif %}
+      {% if mobileColumns == '2' %}<ly-as-11859720>small--one-half</ly-as-11859720> {% endif %}
     {%- endcapture -%}
 
     <div class="card-list grid" data-desktop-columns="{{ desktopColumns }}" data-mobile-columns="{{ mobileColumns }}" data-grid-style="{{ section.settings.grid_style }}">

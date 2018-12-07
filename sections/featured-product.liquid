@@ -1,4 +1,4 @@
-{%- assign product = all_products[section.settings.featured_product] -%}
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}{%- assign product = all_products[section.settings.featured_product] -%}
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 {%- assign current_variant_sale = false -%}
 {%- assign blurb = product.description | split: '</p>' | first | strip_html -%}
@@ -88,19 +88,19 @@
 {% endcomment %}
             <p class="product__price text-center {% if current_variant_sale %}product__price--sale{% endif %}" data-product-price aria-live="polite">
                 {% if settings.tax_included %}
-                <span class="product__sale-price-label visually-hidden"> {{ 'products.product.sale_price' | t }} </span>
-                <span class="product__regular-price-label visually-hidden"> {{ 'products.product.price' | t }} </span>
+                <span class="product__sale-price-label visually-hidden"> {% comment %}ly_i18n_replace_for_[ 'products.product.sale_price' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.sale_price' | t }}{% endcapture %}{% include 'ly-static-string' with '11859682' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %} </span>
+                <span class="product__regular-price-label visually-hidden"> {% comment %}ly_i18n_replace_for_[ 'products.product.price' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.price' | t }}{% endcapture %}{% include 'ly-static-string' with '11859683' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %} </span>
                 <span class="product__current-price" data-regular-price>{{ price | money }}</span>
 
-                <span class="product__compare-price-label visually-hidden"> {{ 'products.product.regular_price' | t }} </span>
+                <span class="product__compare-price-label visually-hidden"> {% comment %}ly_i18n_replace_for_[ 'products.product.regular_price' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.regular_price' | t }}{% endcapture %}{% include 'ly-static-string' with '11859684' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %} </span>
                 <s class="product__compare-price" data-compare-price>{{ compare_at_price | money }}</s>
-                <span class="tax-mssg">* {{ 'products.product.tax_message' | t }}</span>
+                <span class="tax-mssg">* {% comment %}ly_i18n_replace_for_[ 'products.product.tax_message' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.tax_message' | t }}{% endcapture %}{% include 'ly-static-string' with '11859685' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
                 {% else %}
-                <span class="product__sale-price-label visually-hidden"> {{ 'products.product.sale_price' | t }} </span>
-                <span class="product__regular-price-label visually-hidden"> {{ 'products.product.price' | t }} </span>
+                <span class="product__sale-price-label visually-hidden"> {% comment %}ly_i18n_replace_for_[ 'products.product.sale_price' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.sale_price' | t }}{% endcapture %}{% include 'ly-static-string' with '11859682' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %} </span>
+                <span class="product__regular-price-label visually-hidden"> {% comment %}ly_i18n_replace_for_[ 'products.product.price' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.price' | t }}{% endcapture %}{% include 'ly-static-string' with '11859683' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %} </span>
                 <span class="product__current-price" data-regular-price>{{ price | money }}</span>
 
-                <span class="product__compare-price-label visually-hidden"> {{ 'products.product.regular_price' | t }} </span>
+                <span class="product__compare-price-label visually-hidden"> {% comment %}ly_i18n_replace_for_[ 'products.product.regular_price' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.regular_price' | t }}{% endcapture %}{% include 'ly-static-string' with '11859684' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %} </span>
                 <s class="product__compare-price" data-compare-price>{{ compare_at_price | money }}</s>
                 {% endif %}
             </p>
@@ -112,7 +112,7 @@
         <div class="featured-product__share-wrapper">
           <a class="product__more-details btn btn--secondary btn--primary-color btn--clear" {% unless section_onboarding %}href="{{ product.url }}?variant={{ current_variant.id }}"{% endunless %}>
             <span class="product__more-details-icon">{% include 'icon-details' %}</span>
-            <span>{{ 'sections.featured_product.full_details' | t }}</span>
+            <span>{% comment %}ly_i18n_replace_for_[ 'sections.featured_product.full_details' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'sections.featured_product.full_details' | t }}{% endcapture %}{% include 'ly-static-string' with '11859686' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
           </a>
           {% if section.settings.show_share_buttons %}
             {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}

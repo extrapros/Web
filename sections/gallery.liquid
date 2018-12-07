@@ -1,4 +1,4 @@
-{% if section.settings.show_overlay %}
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}{% if section.settings.show_overlay %}
   <style>
     .image-bar--{{ section.id }} .image-bar__caption {
       color: {{ section.settings.overlay_text }}

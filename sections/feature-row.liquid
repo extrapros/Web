@@ -1,4 +1,4 @@
-{%- assign image_crop = false -%}
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}{%- assign image_crop = false -%}
 
 {% if section.settings.image_crop == 'circle' or section.settings.image_crop == 'square' %}
   {%- assign image_crop = true -%}

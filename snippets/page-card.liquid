@@ -1,12 +1,12 @@
-<div class="card critical-clear" data-animate>
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<div class="card critical-clear" data-animate>
   <a href="{{ page.url }}" class="card__wrapper card--article">
     <div class="card__info">
-      <h3 class="card__name">{{ page.title }}</h3>
+      <h3 class="card__name">{% comment %}ly_code_replace_for_[ page.title ]_begin{% endcomment %}{% include 'ly-title' with page %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}</h3>
       <div class="card__excerpt rte">
-        {{ page.content | strip_html | truncatewords: 30 }}
+        {% comment %}ly_code_replace_for_[ page.content | strip_html | truncatewords: 30 ]_begin{% endcomment %}{% include 'ly-content' with page %}{{ ly_translation | strip_html | truncatewords: 30 }}{% comment %}ly_code_replace_end{% endcomment %}
       </div>
       <span class="card__read-more">
-        {{ 'blogs.article.read_more' | t }}
+        {% comment %}ly_i18n_replace_for_[ 'blogs.article.read_more' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.article.read_more' | t }}{% endcapture %}{% include 'ly-static-string' with '11859995' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
         {% include 'icon-arrow-right' %}
       </span>
     </div>

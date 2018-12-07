@@ -1,4 +1,4 @@
-<form class="product-form" action="/cart/add" method="post" enctype="multipart/form-data">
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<form class="product-form" action="/cart/add" method="post" enctype="multipart/form-data">
   {% unless product.variants.size == 1 and product.options.size == 1 and product.options.first == 'Title' and product.variants.first.title == 'Default Title' %}
     {% for option in product.options_with_values %}
       <div class="product-form__item supports-js">
@@ -24,30 +24,30 @@
         {% comment %}
         Note: if you use option_selection.js, your select tag will be overwritten, meaning what you have inside <option> will not reflect what you coded below.
         {% endcomment %}
-        <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+        <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{% comment %}ly_code_replace_for_[ variant.title ]_begin{% endcomment %}{% include 'ly-title' with variant %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %} - {{ variant.price | money_with_currency }}</option>
 
       {% else %}
         <option disabled="disabled">
-          {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+          {% comment %}ly_code_replace_for_[ variant.title ]_begin{% endcomment %}{% include 'ly-title' with variant %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %} - {% comment %}ly_i18n_replace_for_[ 'products.product.sold_out' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.sold_out' | t }}{% endcapture %}{% include 'ly-static-string' with '11860017' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
         </option>
       {% endif %}
     {% endfor %}
   </select>
 
     <div class="product-form__item product-form__quantity-selector">
-      <label class="product-form__quantity-label product-form__quantity-label" for="Quantity-{{ section.id }}">{{ 'products.product.quantity' | t }}</label>
+      <label class="product-form__quantity-label product-form__quantity-label" for="Quantity-{{ section.id }}">{% comment %}ly_i18n_replace_for_[ 'products.product.quantity' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.quantity' | t }}{% endcapture %}{% include 'ly-static-string' with '11860018' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</label>
       <input class="product-form__quantity-input" type="number" id="Quantity-{{ section.id }}" name="quantity" value="1" min="1" pattern="[0-9]*">
     </div>
 
-  <button class="btn btn--to-secondary btn--full product__add-to-cart-button" data-cart-submit type="submit" name="add" aria-live="polite"{% unless current_variant.available %} disabled="true"{% endunless %} aria-live="polite" onclick="return window.adf&&adf.ClickTrack(this,1511687,'vagivital.se|Add to basket',{'itms':[{productname: '<insert product name value here>',productid: '<insert product id value here>',step: '<insert step value here>'}]});">
+  <button class="btn btn--to-secondary btn--full product__add-to-cart-button" data-cart-submit type="submit" name="add" aria-live="polite"{% unless current_variant.available %} disabled="true"{% endunless %} aria-live="polite" onclick="return window.adf&&adf.ClickTrack(this,1511687,'vagivital.se|Add to basket',{'itms':[{productname: '<insert product name value here><ly-as-11860015>',productid: '</ly-as-11860015><insert product id value here><ly-as-11860016>',step: '</ly-as-11860016><insert step value here>'}]});">
     <span class="primary-text" aria-hidden=false data-cart-primary-submit-text>
       {% unless current_variant.available %}
-        {{ 'products.product.sold_out' | t }}
+        {% comment %}ly_i18n_replace_for_[ 'products.product.sold_out' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.sold_out' | t }}{% endcapture %}{% include 'ly-static-string' with '11860017' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
       {% else %}
-        {{ 'products.product.add_to_cart' | t }}
+        {% comment %}ly_i18n_replace_for_[ 'products.product.add_to_cart' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.add_to_cart' | t }}{% endcapture %}{% include 'ly-static-string' with '11860019' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
       {% endunless %}
     </span>
-    <span class="secondary-text" aria-hidden=true data-cart-secondary-submit-text>{{ 'products.product.view_cart' | t }}</span>
+    <span class="secondary-text" aria-hidden=true data-cart-secondary-submit-text>{% comment %}ly_i18n_replace_for_[ 'products.product.view_cart' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'products.product.view_cart' | t }}{% endcapture %}{% include 'ly-static-string' with '11860020' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
   </button>
   <p class="product__notification text-small text-center" data-cart-notification></p>
 </form>

@@ -1,4 +1,4 @@
-{% if section.settings.image != blank %}
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}{% if section.settings.image != blank %}
   <style>
     .hero--{{ section.id }} {
       background-position: {{ section.settings.alignment }};

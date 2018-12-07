@@ -1,4 +1,4 @@
-<div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
 
   {% if article.image %}
     <div class="section-header-image-wrapper">
@@ -24,11 +24,11 @@
               {{ article.author }}
             </span>
           {% endif %}
-          <h1 class="article__title h2">{{ article.title }}</h1>
+          <h1 class="article__title h2">{% comment %}ly_code_replace_for_[ article.title ]_begin{% endcomment %}{% include 'ly-title' with article %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}</h1>
         </header>
 
         <div class="article__body rte" itemprop="articleBody">
-          {{ article.content }}
+          {% comment %}ly_code_replace_for_[ article.content ]_begin{% endcomment %}{% include 'ly-content' with article %}{{ ly_translation }}{% comment %}ly_code_replace_end{% endcomment %}
         </div>
       </div>
 

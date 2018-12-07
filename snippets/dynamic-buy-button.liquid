@@ -1,5 +1,5 @@
-{% if settings.dynamic_button_on_off %}
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}{% if settings.dynamic_button_on_off %}
 <div style="text-align: center;" class="dynamic-buy-button">
-	<a class="btn btn--secondary btn--primary-color btn--clear" href="{{ settings.button_link }}">{{ settings.text_button_name }}</a>
+	<a class="btn btn--secondary btn--primary-color btn--clear" href="{{ settings.button_link }}">{% comment %}ly_new_settings_replace_for_[ settings.text_button_name ]_begin{% endcomment %}{% if request.host %}{% assign host = request.host %}{% assign domains = shop.metafields.language_domains %}{% for domain in domains %}{% assign key = domain | first %}{% assign value = domain | last | split: ',' %}{% if value contains host %}{% assign language = key %}{% endif %}{% endfor %}{% if language == nil %}{% assign language = shop.metafields["languages"]["default"] %}{% endif %}{% else %}{% assign language = cart.attributes["language"] %}{% if language == nil %}{% assign language = shop.metafields["languages"]["default"] %}{% endif %}{% endif %}{% assign namespace = language | append: "as" %}{% if shop.metafields[namespace]["id11859786"] %}{% assign ly_translation = shop.metafields[namespace]["id11859786"] %}{% else %}{% assign ly_translation = settings.text_button_name %}{% endif %}{{ ly_translation }}{% comment %}ly_new_settings_replace_end{% endcomment %}</a>
 </div>
 {% endif %}

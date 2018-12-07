@@ -1,4 +1,4 @@
-<div class="featured-blog featured-blog--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="featured-blog">
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<div class="featured-blog featured-blog--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="featured-blog">
 
   <div class="page-width">
     {% if section.settings.title != blank %}
@@ -47,14 +47,14 @@
                   {% endif %}
                 {% endif %}
                 <div class="card__info">
-                  <h2 class="card__name h4">{{ 'homepage.onboarding.blog_title' | t }}</h2>
+                  <h2 class="card__name h4">{% comment %}ly_i18n_replace_for_[ 'homepage.onboarding.blog_title' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'homepage.onboarding.blog_title' | t }}{% endcapture %}{% include 'ly-static-string' with '11859670' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</h2>
                   {% if section.settings.blog_show_excerpt %}
                     <div class="card__excerpt rte">
-                      {{ 'homepage.onboarding.blog_excerpt' | t }}
+                      {% comment %}ly_i18n_replace_for_[ 'homepage.onboarding.blog_excerpt' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'homepage.onboarding.blog_excerpt' | t }}{% endcapture %}{% include 'ly-static-string' with '11859671' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
                     </div>
                   {% endif %}
                   <span class="card__read-more">
-                    {{ 'blogs.article.read_more' | t }}
+                    {% comment %}ly_i18n_replace_for_[ 'blogs.article.read_more' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.article.read_more' | t }}{% endcapture %}{% include 'ly-static-string' with '11859672' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
                     {% include 'icon-arrow-right' %}
                   </span>
                 </div>
@@ -89,7 +89,7 @@
     {% if section.settings.show_view_all %}
       <div class="featured-blog__view-all">
         <a href="{{ blog.url }}" class="btn{% if section.settings.use_second_button %} btn--secondary{% endif %}">
-          {{ 'collections.general.view_all' | t }}
+          {% comment %}ly_i18n_replace_for_[ 'collections.general.view_all' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'collections.general.view_all' | t }}{% endcapture %}{% include 'ly-static-string' with '11859673' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
         </a>
       </div>
     {% endif %}

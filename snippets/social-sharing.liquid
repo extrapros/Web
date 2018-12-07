@@ -1,4 +1,4 @@
-<!-- /snippets/social-sharing.liquid -->
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<!-- /snippets/social-sharing.liquid -->
 
 {%- assign totalShares = 0 -%}
 {% if settings.share_facebook %}
@@ -26,37 +26,37 @@
         {% include 'icon-share' %}
         {% include 'icon-close' %}
       </span>
-      <span class="social-sharing__toggle-text">{{ 'general.social.share' | t }}</span>
+      <span class="social-sharing__toggle-text">{% comment %}ly_i18n_replace_for_[ 'general.social.share' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.social.share' | t }}{% endcapture %}{% include 'ly-static-string' with '11860030' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
   </button>
 
   <ul id="socialSharing" class="social-sharing__item-list" aria-hidden=true>
 
     {% if settings.share_facebook %}
       <li class="social-sharing__item">
-        <a target="_blank" href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}" class="social-sharing__link" tabindex="-1">
+        <a target="_blank" href="//www.facebook.com/sharer.php?u={{ langify_shop_url | append: share_permalink }}" class="social-sharing__link" tabindex="-1">
           {% include 'icon-facebook' %}
-          <span class="icon__fallback-text" aria-hidden="true">{{ 'general.social.share_on_facebook' | t }}</span>
-          <span class="visually-hidden">{{ 'general.social.alt_text.share_on_facebook' | t }}</span>
+          <span class="icon__fallback-text" aria-hidden="true">{% comment %}ly_i18n_replace_for_[ 'general.social.share_on_facebook' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.social.share_on_facebook' | t }}{% endcapture %}{% include 'ly-static-string' with '11860031' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
+          <span class="visually-hidden">{% comment %}ly_i18n_replace_for_[ 'general.social.alt_text.share_on_facebook' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.social.alt_text.share_on_facebook' | t }}{% endcapture %}{% include 'ly-static-string' with '11860032' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
         </a>
       </li>
     {% endif %}
 
     {% if settings.share_twitter %}
       <li class="social-sharing__item">
-        <a target="_blank" href="//twitter.com/share?text={{ share_title | default: page_description | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}" class="social-sharing__link" tabindex="-1">
+        <a target="_blank" href="//twitter.com/share?text={{ share_title | default: langify_description | url_param_escape }}&amp;url={{ langify_shop_url | append: share_permalink }}" class="social-sharing__link" tabindex="-1">
           {% include 'icon-twitter' %}
-          <span class="icon__fallback-text" aria-hidden="true">{{ 'general.social.share_on_twitter' | t }}</span>
-          <span class="visually-hidden">{{ 'general.social.alt_text.share_on_twitter' | t }}</span>
+          <span class="icon__fallback-text" aria-hidden="true">{% comment %}ly_i18n_replace_for_[ 'general.social.share_on_twitter' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.social.share_on_twitter' | t }}{% endcapture %}{% include 'ly-static-string' with '11860033' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
+          <span class="visually-hidden">{% comment %}ly_i18n_replace_for_[ 'general.social.alt_text.share_on_twitter' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.social.alt_text.share_on_twitter' | t }}{% endcapture %}{% include 'ly-static-string' with '11860034' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
         </a>
       </li>
     {% endif %}
 
     {% if settings.share_pinterest %}
       <li class="social-sharing__item">
-        <a target="_blank" href="//pinterest.com/pin/create/button/?url={{ shop.url | append: share_permalink }}&amp;media={{ share_image | img_url: '1024x1024' }}&amp;description={{ share_title | default: page_description | url_param_escape }}" class="social-sharing__link" tabindex="-1">
+        <a target="_blank" href="//pinterest.com/pin/create/button/?url={{ langify_shop_url | append: share_permalink }}&amp;media={{ share_image | img_url: '1024x1024' }}&amp;description={{ share_title | default: langify_description | url_param_escape }}" class="social-sharing__link" tabindex="-1">
           {% include 'icon-pinterest' %}
-          <span class="icon__fallback-text" aria-hidden="true">{{ 'general.social.share_on_pinterest' | t }}</span>
-          <span class="visually-hidden">{{ 'general.social.alt_text.share_on_pinterest' | t }}</span>
+          <span class="icon__fallback-text" aria-hidden="true">{% comment %}ly_i18n_replace_for_[ 'general.social.share_on_pinterest' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.social.share_on_pinterest' | t }}{% endcapture %}{% include 'ly-static-string' with '11860035' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
+          <span class="visually-hidden">{% comment %}ly_i18n_replace_for_[ 'general.social.alt_text.share_on_pinterest' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.social.alt_text.share_on_pinterest' | t }}{% endcapture %}{% include 'ly-static-string' with '11860036' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
         </a>
       </li>
     {% endif %}

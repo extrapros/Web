@@ -1,4 +1,4 @@
-<style>
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<style>
   .newsletter-wrapper--{{ section.id }} input[type='email']::-webkit-input-placeholder {
     color: {{ section.settings.text_color }};
   }
@@ -48,11 +48,11 @@
     {% form 'customer' %}
       <input type="hidden" name="contact[tags]" value="newsletter">
       <div class="input-group--underline" data-animate>
-        <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ section.settings.heading | escape }}" name="contact[email]" class="input-group__field" id="EmailField{{ section.id }}" aria-label="{{ 'general.newsletter_form.newsletter_placeholder' | t }}" autocorrect="off" autocapitalize="off">
+        <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ section.settings.heading | escape }}" name="contact[email]" class="input-group__field" id="EmailField{{ section.id }}" aria-label="{% comment %}ly_i18n_replace_for_[ 'general.newsletter_form.newsletter_placeholder' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.newsletter_form.newsletter_placeholder' | t }}{% endcapture %}{% include 'ly-static-string' with '11859722' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}" autocorrect="off" autocapitalize="off">
         <div class="input-group__btn input-group__btn--newsletter">
           <button type="submit" class="btn--newsletter__submit" tabindex="-1">
             {% include 'icon-arrow-right' %}
-            <span class="visually-hidden">{{ 'sections.newsletter.submit' | t }}</span>
+            <span class="visually-hidden">{% comment %}ly_i18n_replace_for_[ 'sections.newsletter.submit' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'sections.newsletter.submit' | t }}{% endcapture %}{% include 'ly-static-string' with '11859723' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
           </button>
         </div>
       </div>

@@ -1,4 +1,4 @@
-<style>
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<style>
   #VideoSection--{{ section.id }} .video-section__cover-background {
     background-color: {{ section.settings.background_color }};
     background-position: {{ section.settings.cover_image_position }};
@@ -42,7 +42,7 @@
 <div id="VideoSection--{{ section.id }}" class="video-section lazyload" data-section-id="{{ section.id }}" data-section-type="video-section" data-video-id="{{ section.settings.video_url.id }}" data-video-type="{{ section.settings.video_url.type }}" data-bgset="{% include 'bgset', image: section.settings.cover_image %}">
   <div class="video-section__body-overlay"></div>
   <button class="btn btn--clear btn--square video-section__player-close">
-    <span class="visually-hidden">{{ 'video.close' | t }}</span>
+    <span class="visually-hidden">{% comment %}ly_i18n_replace_for_[ 'video.close' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'video.close' | t }}{% endcapture %}{% include 'ly-static-string' with '11859770' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
     {% include 'icon-close' %}
   </button>
   <div class="video-section__player"></div>
@@ -59,7 +59,7 @@
         <h3 class="video-section__cover-text">{{ section.settings.cover_text }}</h3>
       {% endif %}
       <button class="btn btn--clear video-section__load-player-button">
-        <span class="visually-hidden">{{ 'video.play' | t }}</span>
+        <span class="visually-hidden">{% comment %}ly_i18n_replace_for_[ 'video.play' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'video.play' | t }}{% endcapture %}{% include 'ly-static-string' with '11859771' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</span>
         <div class="video-section__load-player-button-triangle"></div>
         <div class="video-section__load-player-button-circle"></div>
       </button>

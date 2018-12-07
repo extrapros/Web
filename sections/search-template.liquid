@@ -1,16 +1,16 @@
-{%- assign limit = section.settings.results | times: section.settings.rows -%}
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}{%- assign limit = section.settings.results | times: section.settings.rows -%}
 
 {% paginate search.results by limit %}
 
 <div class="page-width" data-section-id="{{ section.id }}" data-section-type="search-template">
   <header class="section-header section-header--small text-center">
     {% if search.performed %}
-      <h1 class="section-header__title h2">{{ 'general.search.search_results_title' | t }}</h1>
+      <h1 class="section-header__title h2">{% comment %}ly_i18n_replace_for_[ 'general.search.search_results_title' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.search.search_results_title' | t }}{% endcapture %}{% include 'ly-static-string' with '11859759' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</h1>
       <div class="section-header__description">
-        {{ 'general.search.results_count_html' | t: count: search.results_count, terms: search.terms }}
+        {% comment %}ly_i18n_replace_for_[ 'general.search.results_count_html' | t: count: search.results_count, terms: search.terms ]_begin{% endcomment %}{% if search.results_count == 0 %}{% capture ly_template %}{{ 'general.search.results_count_html' | t: count: search.results_count, terms: search.terms }}{% endcapture %}{% include 'ly-static-string' with '11859761' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = search.results_count %}{% assign ly_template = ly_template | replace: '[[count]]', replacement %}{% assign replacement = search.terms  %}{% assign ly_template = ly_template | replace: '[[terms]]', replacement %}{% if escape_content %}{{ ly_template}}{% else %}{{ ly_template }}{% endif %}{% elsif search.results_count == 1 %}{% capture ly_template %}{{ 'general.search.results_count_html' | t: count: search.results_count, terms: search.terms }}{% endcapture %}{% include 'ly-static-string' with '11859760' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = search.results_count %}{% assign ly_template = ly_template | replace: '[[count]]', replacement %}{% assign replacement = search.terms  %}{% assign ly_template = ly_template | replace: '[[terms]]', replacement %}{% if escape_content %}{{ ly_template}}{% else %}{{ ly_template }}{% endif %}{% elsif search.results_count == 2 %}{% capture ly_template %}{{ 'general.search.results_count_html' | t: count: search.results_count, terms: search.terms }}{% endcapture %}{% include 'ly-static-string' with '11859761' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = search.results_count %}{% assign ly_template = ly_template | replace: '[[count]]', replacement %}{% assign replacement = search.terms  %}{% assign ly_template = ly_template | replace: '[[terms]]', replacement %}{% if escape_content %}{{ ly_template}}{% else %}{{ ly_template }}{% endif %}{% else %}{% capture ly_template %}{{ 'general.search.results_count_html' | t: count: search.results_count, terms: search.terms }}{% endcapture %}{% include 'ly-static-string' with '11859761' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = search.results_count %}{% assign ly_template = ly_template | replace: '[[count]]', replacement %}{% assign replacement = search.terms  %}{% assign ly_template = ly_template | replace: '[[terms]]', replacement %}{% if escape_content %}{{ ly_template}}{% else %}{{ ly_template }}{% endif %}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}
       </div>
     {% else %}
-      <h1 class="section-header__title h2">{{ 'general.search.title' | t }}</h1>
+      <h1 class="section-header__title h2">{% comment %}ly_i18n_replace_for_[ 'general.search.title' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.search.title' | t }}{% endcapture %}{% include 'ly-static-string' with '11859765' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</h1>
       <div class="search-template__search-bar">
         {% include 'search-bar' %}
       </div>
@@ -23,8 +23,8 @@
     {%- assign mobileColumns = '1' -%}
 
     {%- capture gridClasses -%}
-      {% if desktopColumns == '3' %}medium-up--one-third {% else %}medium-up--one-half {% endif %}
-      {% if mobileColumns == '2' %}small--one-half {% endif %}
+      {% if desktopColumns == '3' %}<ly-as-11859756>medium-up--one-third</ly-as-11859756> {% else %}<ly-as-11859757>medium-up--one-half</ly-as-11859757> {% endif %}
+      {% if mobileColumns == '2' %}<ly-as-11859758>small--one-half</ly-as-11859758> {% endif %}
     {%- endcapture -%}
 
     <div class="card-list grid" data-desktop-columns="{{ desktopColumns }}" data-mobile-columns="{{ mobileColumns }}" data-grid-style="{{ section.settings.grid_style }}">

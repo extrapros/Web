@@ -1,19 +1,19 @@
-{%- assign limit = section.settings.articles | times: section.settings.rows -%}
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}{%- assign limit = section.settings.articles | times: section.settings.rows -%}
 
 <div class="blog-template" data-section-id="{{ section.id }}" data-section-type="blog-template">
   {% paginate blog.articles by limit %}
 
     <div class="page-width">
       <header class="section-header section-header--small text-center">
-        <h1 class="section-header__title h2">{{ page_title }}</h1>
+        <h1 class="section-header__title h2">{{ langify_title }}</h1>
       </header>
 
       {%- assign desktopColumns = section.settings.articles -%}
       {%- assign mobileColumns = '1' -%}
 
       {%- capture gridClasses -%}
-        {% if desktopColumns == '3' %}medium-up--one-third {% else %}medium-up--one-half {% endif %}
-        {% if mobileColumns == '2' %}small--one-half {% endif %}
+        {% if desktopColumns == '3' %}<ly-as-11859625>medium-up--one-third</ly-as-11859625> {% else %}<ly-as-11859626>medium-up--one-half</ly-as-11859626> {% endif %}
+        {% if mobileColumns == '2' %}<ly-as-11859627>small--one-half</ly-as-11859627> {% endif %}
       {%- endcapture -%}
 
       <div class="card-list grid" data-desktop-columns="{{ desktopColumns }}" data-mobile-columns="{{ mobileColumns }}" data-grid-style="{{ section.settings.grid_style }}">
@@ -25,7 +25,7 @@
       </div>
 
       {% if blog.articles.size == 0 %}
-        <p class="text-center">{{ 'blogs.article.no_matches' | t }}</p>
+        <p class="text-center">{% comment %}ly_i18n_replace_for_[ 'blogs.article.no_matches' | t ]_begin{% endcomment %}{% capture ly_template %}{{ 'blogs.article.no_matches' | t }}{% endcapture %}{% include 'ly-static-string' with '11859628' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}</p>
       {% endif %}
 
       {% if paginate.pages > 1 %}

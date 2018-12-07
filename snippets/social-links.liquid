@@ -1,4 +1,4 @@
-<div class="social-links{% if largeIcons %} social-links--large{% endif %}">
+{% comment %}ly_global_begin{% endcomment %}{% include 'ly-global' %}{% comment %}ly_global_end{% endcomment %}<div class="social-links{% if largeIcons %} social-links--large{% endif %}">
   {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo' | split: ',' -%}
   <ul class="list--inline">
     {% for social_account in social_accounts %}
@@ -9,7 +9,7 @@
 
       {% if settings[social_link] != blank %}
         <li class="social-links__icon">
-          <a target="_blank" href="{{ settings[social_link] }}" title="{{ 'general.social.social_platform' | t: name: shop.name, platform: social }}"{% if disableTab %} tabindex="-1"{% endif %}>
+          <a target="_blank" href="{{ settings[social_link] }}" title="{% comment %}ly_i18n_replace_for_[ 'general.social.social_platform' | t: name: langify_shop_name, platform: social ]_begin{% endcomment %}{% capture ly_template %}{{ 'general.social.social_platform' | t: name: langify_shop_name, platform: social }}{% endcapture %}{% include 'ly-static-string' with '11860029' %}{% if ly_translation %}{% assign escape_content = true %}{% assign ly_template = ly_translation %}{% else %}{% assign escape_content = false %}{% endif %}{% assign replacement = langify_shop_name %}{% assign ly_template = ly_template | replace: '[[name]]', replacement %}{% assign replacement = social  %}{% assign ly_template = ly_template | replace: '[[platform]]', replacement %}{% if escape_content %}{{ ly_template | escape}}{% else %}{{ ly_template }}{% endif %}{% comment %}ly_i18n_replace_end{% endcomment %}"{% if disableTab %} tabindex="-1"{% endif %}>
             {% include social_icon %}
             <span class="icon__fallback-text">{{ social }}</span>
           </a>
