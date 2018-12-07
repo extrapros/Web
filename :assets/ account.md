@@ -32,7 +32,7 @@ Password: Skitsnygg40
 
 Namn: VagiVital Sweden
 Inlogg: enas18t@gmail.com
-Password: Skitsnygg40 
+Password: Skitsnygg40
 
 ---
 
@@ -51,7 +51,8 @@ Lösenord:                               V-Peptonic2018
 ### How To Run:
 - Open terminal
 - Go to folder with theme files using the cd command
-    + cd /Users/williamalbright/Öström\ Studio\ Dropbox/Projekt/VAGIVITAL
+    + cd /Users/williamalbright/Öström\ Studio\ Dropbox/Projekt/VAGIVITAL/Web
+    +
 - run "theme watch" command
 - make changes and save / see if they update
 
