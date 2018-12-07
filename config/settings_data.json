@@ -1,0 +1,1624 @@
+{
+  "current": {
+    "tax_included": true,
+    "tax_amount": "25",
+    "dynamic_button_on_off": true,
+    "text_button_name": "köp nu",
+    "button_link": "\/products\/produkt-vagivital",
+    "color_primary": "#7e4e77",
+    "color_header_text": "#7e4e77",
+    "color_primary_heading_text": "#4a4a4a",
+    "color_primary_body_text": "#4a4a4a",
+    "color_footer_text": "#ffffff",
+    "color_button_text": "#ffffff",
+    "color_header_bg": "#ffffff",
+    "color_footer_bg": "#7e4e77",
+    "color_main_bg": "#ffffff",
+    "color_secondary_bg": "#f9ecf1",
+    "color_product_cards": "#fff",
+    "color_form_elements": "#fff",
+    "color_cart_flag": "#eb4f47",
+    "color_alert": "#eb4f47",
+    "color_affirm": "#42c0a4",
+    "type_base_size": "62.5%",
+    "type_header_family": "'VitalBrown', 'Helvetica Neue', Helvetica, sans-serif",
+    "type_bold_titles": false,
+    "type_base_family": "'VitalBrown', 'Helvetica Neue', Helvetica, sans-serif",
+    "show_cart_drawer": true,
+    "show_cart_note": false,
+    "share_image": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_facebook_link": "https:\/\/www.facebook.com\/VagiVital-508290742902620\/?modal=admin_todo_tour",
+    "social_twitter_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/vagivital\/?hl=undefined",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo-dk.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Open Sans",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#7e4e77",
+    "checkout_button_color": "#7e4e77",
+    "checkout_error_color": "#ff6d6d",
+    "logo_max_height": "15",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "icon": "bag",
+          "logo": "shopify:\/\/shop_images\/logo-dk.png",
+          "logo_max_height": "50",
+          "enable_transparent": true,
+          "transparent_logo": "shopify:\/\/shop_images\/logo.png",
+          "transparent_text_color": "#ffffff",
+          "primary_navigation": "main-menu",
+          "secondary_navigation": "footer",
+          "show_social_icons": false,
+          "show_announcement": true,
+          "home_page_only": true,
+          "announcement_text": "Announce something here",
+          "announcement_link": "",
+          "announcement_icon": "checkmark",
+          "announcement_color_bg": "#7e4e77",
+          "announcement_color_text": "#fff"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1528894757883": {
+            "type": "menu",
+            "settings": {
+              "link_list": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "1528894757883"
+        ],
+        "settings": {
+          "show_social_icons": true,
+          "show_payment_icons": true,
+          "enable_parallax": false,
+          "show_newsletter": true,
+          "newsletter_heading": "Få nyheterna först, fyll i din emailadress!",
+          "newsletter_subheading": "* Du kan såklart alltid avregistrera dig!",
+          "newsletter_button": "Skicka"
+        }
+      },
+      "1476381402840": {
+        "type": "video",
+        "settings": {
+          "cover_text": "",
+          "video_url": "https:\/\/www.youtube.com\/watch?v=ZQYfnsUXqyg",
+          "cover_image": "shopify:\/\/shop_images\/Doktorn_svarar_new.jpg",
+          "cover_image_position": "center center",
+          "show_overlay": true,
+          "overlay_color": "#000000",
+          "overlay_text": "#ffffff",
+          "overlay_opacity": 30
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "products": "2",
+          "rows": "6",
+          "product_tags_enable": false,
+          "product_sorting_enable": false,
+          "collection_hero_image": false,
+          "collection_hero_image_parallax": false,
+          "grid_style": "collage",
+          "show_spacing": false,
+          "show_vendor": true
+        }
+      },
+      "1478027260401": {
+        "type": "quotes",
+        "disabled": true,
+        "blocks": {
+          "1478027260401-0": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>&Auml;ntligen slapp jag t&auml;nka p&aring; n&aring;got som hela tiden legat i bakhuvudet och begr&auml;nsat mig i vardagen!<\/p>",
+              "author": "Av Annika Persson, 13 mars 2018"
+            }
+          },
+          "1478027389453": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Den st&ouml;rsta skillnaden &auml;r att v&aring;rt samliv fungerar igen!<\/p>",
+              "author": "Av Gunilla Smedsby, 24 maj 2018"
+            }
+          },
+          "1522159704730": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>K&auml;ndes smidigt med en f&auml;rdig dos och en applikator, d&aring; slipper man fundera &ouml;ver om det blir helt r&auml;tt och slipper kladd, sk&ouml;nt!<\/p>",
+              "author": "Av Maj Vernersson, 4 april 2018"
+            }
+          },
+          "1522159827069": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>K&auml;nner mig bara ledsen &ouml;ver att jag g&aring;tt s&aring; l&auml;nge med besv&auml;r och inte testat den Vagivital tidigare. Det G&Aring;R ju att slippa besv&auml;r!<\/p>",
+              "author": "Av Malin Sjöberg, 16 juni 2018"
+            }
+          },
+          "1522159850696": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Jag lever ett fantastiskt och mycket aktivt liv. Jag arbetar, studerar och reser, utan att min &aring;lder (snart 70) f&ouml;r en sekund &auml;r ett bekymmer. Snarare en tillg&aring;ng med all erfarenhet, all &ldquo;know-how&rdquo; livet hittills gett mig.<\/p>",
+              "author": "Av Agneta Larsson, 22 maj 2018"
+            }
+          }
+        },
+        "block_order": [
+          "1478027260401-0",
+          "1478027389453",
+          "1522159704730",
+          "1522159827069",
+          "1522159850696"
+        ],
+        "settings": {
+          "title_text": "Kundrekommendationer",
+          "color_bg": "#ffffff",
+          "color_text": "#7e4e77",
+          "autoplay_speed": "6000"
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "hide_variant_images": true,
+          "show_share_buttons": true
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "grid_style": "collage",
+          "articles": "2",
+          "rows": "4",
+          "blog_show_date": true
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "1522058183092": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero-split.jpg",
+              "alignment": "center center",
+              "title": "Hormonfri aktivgel mot vaginal torrhet",
+              "blurb": "Nästan alla kvinnor lider av intimbesvär i perioder, ofta i samband med klimakteriet och därefter. VagiVital är en hormonfri, kristallklar aktivgel mot torra slemhinnor som motverkar klåda och sveda i underlivet – med kliniskt bevisad effekt.  <a href=\"\/pages\/om-vagivital\">Läs mer<\/a>",
+              "button": "Hero Image",
+              "cta_link": "\/cart\/7223656611900:1"
+            }
+          }
+        },
+        "block_order": [
+          "1522058183092"
+        ],
+        "settings": {
+          "cta": "köp nu",
+          "show_overlay": true,
+          "overlay_color": "#313131",
+          "overlay_text": "#ffffff",
+          "overlay_opacity": "0"
+        }
+      },
+      "1486649811524": {
+        "type": "featured-product",
+        "settings": {
+          "featured_product": "produkt-vagivital",
+          "layout": "square",
+          "image_size": "contain",
+          "background_color": "transparent",
+          "show_quantity_selector": true,
+          "show_variant_labels": false,
+          "show_vendor": false,
+          "show_share_buttons": false
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "image_parallax": true,
+          "show_date": true,
+          "show_author": false,
+          "show_share_buttons": true
+        }
+      },
+      "1522141148925": {
+        "type": "rich-text",
+        "disabled": true,
+        "blocks": {
+          "1527526176630": {
+            "type": "logo_icons",
+            "settings": {
+              "image_picker": "shopify:\/\/shop_images\/Karolinska_Institutet_Logo_vagilila.png",
+              "press_link": "https:\/\/ki.se\/start"
+            }
+          },
+          "1527527614009": {
+            "type": "logo_icons",
+            "settings": {
+              "image_picker": "shopify:\/\/shop_images\/akademiska_logo_lila.png",
+              "press_link": "https:\/\/www.akademiska.se\/en\/"
+            }
+          },
+          "1527527788403": {
+            "type": "logo_icons",
+            "settings": {
+              "image_picker": "shopify:\/\/shop_images\/landsting.png",
+              "press_link": "https:\/\/www.vll.se\/Startsida\/halsa-och-vard\/vara-sjukhus\/norrlands-universitetssjukhus"
+            }
+          }
+        },
+        "block_order": [
+          "1527526176630",
+          "1527527614009",
+          "1527527788403"
+        ],
+        "settings": {
+          "full_width": true,
+          "special_color": false,
+          "custom_css": "",
+          "section_title": "Kliniskt bevisad",
+          "text": "<p>VagiVital har testats av kvinnliga forskare vid Karolinska Universitetssjukhuset, Akademiska sjukhuset i Uppsala samt Norrlands universitetssjukhus. Resultatet &auml;r en kliniskt bevisad god effekt mot besv&auml;r vid vaginal atrofi. Varf&ouml;r? Aktivgelen avger vatten till slemhinnan &ouml;ver tid, &aring;terst&auml;ller pH och stimulerar tillv&auml;xten av celler i slemhinnans ytskikt.<\/p>\n<p>VagiVital &auml;r helt hormonfri, men visade resultat i samma niv&aring; som hormonpreparat under en multicenterstudie. <span style=\"text-decoration: none;\">Vi arbetar f&ouml;r en mer j&auml;mst&auml;lld forskning, d&auml;r fokus p&aring; kvinnors h&auml;lsa ocks&aring; ska prioriteras. H&aring;ller du med? St&ouml;d kvinnlig underlivsforskning och skriv under v&aring;r namninsamling&nbsp;<\/span><a href=\"https:\/\/www.skrivunder.com\/jamstalld_forskning__for_ett_okat_fokus_pa_kvinnlig_underlivshalsa\" title=\"https:\/\/www.skrivunder.com\/jamstalld_forskning__for_ett_okat_fokus_pa_kvinnlig_underlivshalsa\">h&auml;r!<\/a><\/p>",
+          "text_size": "medium"
+        }
+      },
+      "1527595375575": {
+        "type": "hero",
+        "settings": {
+          "custom_css": "",
+          "hero_size": "medium",
+          "image": "shopify:\/\/shop_images\/20180511_Vagivital_0000064_a1ae387e-f2d4-4749-b47f-ce78d3429540.jpg",
+          "alignment": "center center",
+          "title": "Aktivgel",
+          "text": "<p>VagiVital &auml;r en vattenbaserad kristallklar aktivgel mot underlivsbesv&auml;r som torrhet, kl&aring;da, och sveda. Hur? Genom en smart applikator som ger r&auml;tt dos direkt och &auml;r enkel att reng&ouml;ra i endast hett vatten eftersom den &auml;r helt fri fr&aring;n fetter &ndash; allt f&ouml;r att f&ouml;renkla!<\/p>",
+          "text_size": "medium",
+          "use_second_button": false,
+          "button_label": "",
+          "button_link": "",
+          "show_overlay": false,
+          "overlay_color": "#000000",
+          "overlay_text": "#ffffff",
+          "overlay_opacity": "0.5"
+        }
+      },
+      "1527596012598": {
+        "type": "hero",
+        "settings": {
+          "custom_css": "",
+          "hero_size": "medium",
+          "image": "shopify:\/\/shop_images\/20180511_Vagivital_0000154_laerge.jpg",
+          "alignment": "center center",
+          "title": "Hormonfri",
+          "text": "<p><span style=\"text-decoration: none;\">Gl&ouml;m hormonerna! VagiVital har den kortaste inneh&aring;llsf&ouml;rteckningen p&aring; marknaden och &auml;r helt hormonfrI men visade resultat i samma niv&aring; som hormonpreparat under en multicenterstudie.<\/span><\/p>",
+          "text_size": "medium",
+          "use_second_button": false,
+          "button_label": "",
+          "button_link": "",
+          "show_overlay": false,
+          "overlay_color": "#000000",
+          "overlay_text": "#ffffff",
+          "overlay_opacity": "0.5"
+        }
+      },
+      "1527596086700": {
+        "type": "hero",
+        "blocks": {
+          "1527597736042": {
+            "type": "logo_icons",
+            "settings": {
+              "image_picker": "shopify:\/\/shop_images\/ce-logo.png"
+            }
+          }
+        },
+        "block_order": [
+          "1527597736042"
+        ],
+        "settings": {
+          "custom_css": "custom-ce",
+          "hero_size": "medium",
+          "image": "shopify:\/\/shop_images\/Prod_1_1550x600_ex.jpg",
+          "alignment": "center center",
+          "title": "CE-märkning",
+          "text": "<p>VagiVital &auml;r CE-m&auml;rkt som en medicinteknisk produkt. Det betyder att VagiVital uppfyller grundl&auml;ggande krav p&aring; s&auml;kerhet, effekt, funktion och milj&ouml; enligt EU:s lagstiftning. Tryggt och s&auml;kert!<\/p>",
+          "text_size": "medium",
+          "use_second_button": false,
+          "button_label": "",
+          "button_link": "",
+          "show_overlay": false,
+          "overlay_color": "#000000",
+          "overlay_text": "#ffffff",
+          "overlay_opacity": "0.5"
+        }
+      },
+      "password-header": {
+        "type": "password-header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo-dk.png",
+          "logo_max_width": "450"
+        }
+      },
+      "password-content": {
+        "type": "password-content",
+        "settings": {
+          "header": "Kommer snart",
+          "newsletter_enable": true,
+          "newsletter_form_heading": "Vill du veta när VagiVital finns att köpa och få nyheter om forskning och produkter?  <br> Fyll i din epostadress!",
+          "newsletter_form_subheading": "PS. Du kan såklart alltid avregistrera dig!",
+          "newsletter_placeholder": "E-post",
+          "newsletter_button_text": "Skicka",
+          "show_share_buttons": false,
+          "social_message": "Spread the word"
+        }
+      },
+      "password-footer": {
+        "type": "password-footer",
+        "settings": {
+          "show_powered_by": true
+        }
+      },
+      "1527608327476": {
+        "type": "rich-text",
+        "blocks": {
+          "1527608366631": {
+            "type": "logo_icons",
+            "settings": {
+              "image_picker": "shopify:\/\/shop_images\/press-3_ffcbb142-7e13-4c81-8107-3dfbdbd10f2b.png",
+              "press_link": "https:\/\/feministisktperspektiv.se\/nyhetsbrev\/456\/"
+            }
+          },
+          "1527608422265": {
+            "type": "logo_icons",
+            "settings": {
+              "image_picker": "shopify:\/\/shop_images\/press-2.png",
+              "press_link": "http:\/\/www.folkbladet.se\/nyheter\/norrkoping\/vaginal-halsa-i-fokus-om5252745.aspx"
+            }
+          },
+          "1527608439265": {
+            "type": "logo_icons",
+            "settings": {
+              "image_picker": "shopify:\/\/shop_images\/press-1.png",
+              "press_link": "https:\/\/mitti.se\/nyheter\/miljoner-ifran-underlivsbesvar\/"
+            }
+          },
+          "1527608479167": {
+            "type": "logo_icons",
+            "settings": {
+              "image_picker": "shopify:\/\/shop_images\/p4-logo-update-3.png",
+              "press_link": "http:\/\/p4dela.sverigesradio.se\/?id=7338"
+            }
+          },
+          "1533729079035": {
+            "type": "logo_icons",
+            "settings": {
+              "image_picker": "shopify:\/\/shop_images\/mabra_logo_clean.png",
+              "press_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0014\/2760\/3516\/t\/2\/assets\/MaBra_Vagivital_artikel.pdf"
+            }
+          }
+        },
+        "block_order": [
+          "1527608366631",
+          "1527608422265",
+          "1527608439265",
+          "1527608479167",
+          "1533729079035"
+        ],
+        "settings": {
+          "full_width": true,
+          "special_color": false,
+          "custom_css": "press-custom",
+          "section_title": "Press",
+          "text": "",
+          "text_size": "medium"
+        }
+      },
+      "custom-about-hero": {
+        "type": "custom-about-hero",
+        "settings": {
+          "custom_css": "",
+          "hero_size": "medium",
+          "image": "shopify:\/\/shop_images\/20180511_Vagivital_0000215.jpg",
+          "alignment": "center center",
+          "title": "Älska ditt underliv hela livet",
+          "text": "",
+          "text_size": "medium",
+          "use_second_button": false,
+          "button_label": "",
+          "button_link": "",
+          "show_overlay": false,
+          "overlay_color": "#000000",
+          "overlay_text": "#ffffff",
+          "overlay_opacity": "0.5"
+        }
+      },
+      "product-template-revise": {
+        "type": "product-template-revise",
+        "settings": {
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "hide_variant_images": true,
+          "show_share_buttons": true
+        }
+      },
+      "header-revise": {
+        "type": "header-revise",
+        "settings": {
+          "desktop_menu": true,
+          "icon": "bag",
+          "logo": "shopify:\/\/shop_images\/logo-dk.png",
+          "logo_max_height": "60",
+          "enable_transparent": true,
+          "transparent_logo": "shopify:\/\/shop_images\/logo.png",
+          "transparent_text_color": "#ffffff",
+          "primary_navigation": "main-menu",
+          "secondary_navigation": "",
+          "show_social_icons": false,
+          "show_announcement": false,
+          "home_page_only": false,
+          "announcement_text": "Announce something here",
+          "announcement_link": "shopify:\/\/pages\/om-vagivital",
+          "announcement_icon": "none",
+          "announcement_color_bg": "#7e4e77",
+          "announcement_color_text": "#fff"
+        }
+      },
+      "custom-hero": {
+        "type": "custom-hero",
+        "blocks": {
+          "1528818489866": {
+            "type": "hero",
+            "settings": {
+              "custom_css": "",
+              "hero_size": "medium",
+              "image": "shopify:\/\/shop_images\/omvagivital.jpg",
+              "alignment": "center center",
+              "title": "Älska ditt underliv hela livet",
+              "text": "",
+              "text_size": "medium",
+              "use_second_button": false,
+              "button_label": "",
+              "button_link": "",
+              "show_overlay": false,
+              "overlay_color": "#000000",
+              "overlay_text": "#ffffff",
+              "overlay_opacity": "0.5"
+            }
+          }
+        },
+        "block_order": [
+          "1528818489866"
+        ],
+        "settings": {}
+      },
+      "custom-hero-2": {
+        "type": "custom-hero-2",
+        "blocks": {
+          "1528818879073": {
+            "type": "hero",
+            "settings": {
+              "custom_css": "",
+              "hero_size": "medium",
+              "image": "shopify:\/\/shop_images\/Poppy_extended_center.jpg",
+              "alignment": "center center",
+              "title": "Vanliga besvär",
+              "text": "",
+              "text_size": "medium",
+              "use_second_button": false,
+              "button_label": "",
+              "button_link": "",
+              "show_overlay": false,
+              "overlay_color": "#000000",
+              "overlay_text": "#ffffff",
+              "overlay_opacity": "0.5"
+            }
+          }
+        },
+        "block_order": [
+          "1528818879073"
+        ],
+        "settings": {}
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_notes_enable": false
+        }
+      },
+      "1535982596335": {
+        "type": "custom-rich-text",
+        "disabled": true,
+        "settings": {
+          "full_width": true,
+          "special_color": false,
+          "custom_css": "",
+          "section_title": "Kliniskt bevisad",
+          "text": "<p>VagiVital har testats av kvinnliga forskare vid Karolinska Universitetssjukhuset, Akademiska sjukhuset i Uppsala samt Norrlands universitetssjukhus. Resultatet &auml;r en kliniskt bevisad god effekt mot besv&auml;r vid vaginal atrofi. Varf&ouml;r? Aktivgelen avger vatten till slemhinnan &ouml;ver tid, &aring;terst&auml;ller pH och stimulerar tillv&auml;xten av celler i slemhinnans ytskikt.<\/p>\n<p>VagiVital &auml;r helt hormonfri, men visade resultat i samma niv&aring; som hormonpreparat under en multicenterstudie.&nbsp;<span style=\"text-decoration: none;\">Vi arbetar f&ouml;r en mer j&auml;mst&auml;lld forskning, d&auml;r fokus p&aring; kvinnors h&auml;lsa ocks&aring; ska prioriteras. H&aring;ller du med? St&ouml;d kvinnlig underlivsforskning och skriv under v&aring;r namninsamling&nbsp;<\/span><a href=\"https:\/\/www.skrivunder.com\/jamstalld_forskning__for_ett_okat_fokus_pa_kvinnlig_underlivshalsa\" title=\"https:\/\/www.skrivunder.com\/jamstalld_forskning__for_ett_okat_fokus_pa_kvinnlig_underlivshalsa\">h&auml;r!<\/a><\/p>",
+          "text_size": "medium"
+        }
+      },
+      "1536670999960": {
+        "type": "custom-about-hero",
+        "settings": {
+          "custom_css": "kliniskt",
+          "hero_size": "medium",
+          "image": "shopify:\/\/shop_images\/Prod2_ex_v3.jpg",
+          "alignment": "center center",
+          "title": "Kliniskt bevisad",
+          "text": "<p>VagiVital har testats av kvinnliga forskare vid Karolinska Universitetssjukhuset, Akademiska sjukhuset i Uppsala samt Norrlands universitetssjukhus. Resultatet &auml;r en kliniskt bevisad god effekt mot besv&auml;r vid vaginal atrofi. Varf&ouml;r? Aktivgelen avger vatten till slemhinnan &ouml;ver tid, &aring;terst&auml;ller pH och stimulerar tillv&auml;xten av celler i slemhinnans ytskikt.<\/p>",
+          "text_size": "medium",
+          "use_second_button": false,
+          "button_label": "",
+          "button_link": "",
+          "show_overlay": false,
+          "overlay_color": "#000000",
+          "overlay_text": "#ffffff",
+          "overlay_opacity": "0.5"
+        }
+      }
+    },
+    "content_for_index": [
+      "1486649811524",
+      "1535982596335",
+      "1522141148925",
+      "1536670999960",
+      "1527595375575",
+      "1527596086700",
+      "1527596012598",
+      "1478027260401",
+      "1476381402840",
+      "1527608327476"
+    ]
+  },
+  "presets": {
+    "Warm": {
+      "color_primary": "#eb4f47",
+      "color_header_text": "#e1c9b4",
+      "color_primary_heading_text": "#4a4a4a",
+      "color_primary_body_text": "#4a4a4a",
+      "color_footer_text": "#4a4a4a",
+      "color_button_text": "#ffffff",
+      "color_header_bg": "#fff",
+      "color_footer_bg": "#eae7e0",
+      "color_main_bg": "#faf9f6",
+      "color_secondary_bg": "#f4f1ec",
+      "color_product_cards": "#fff",
+      "color_form_elements": "#fff",
+      "color_cart_flag": "#eb4f47",
+      "type_base_size": "62.5%",
+      "type_header_family": "Baskerville MT, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif",
+      "type_bold_titles": false,
+      "type_base_family": "'Avenir', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+      "show_cart_drawer": true,
+      "show_cart_note": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d",
+      "logo_max_height": "15",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "icon": "bag",
+            "logo_max_height": "15",
+            "enable_transparent": true,
+            "transparent_text_color": "#ffffff",
+            "primary_navigation": "main-menu",
+            "secondary_navigation": "footer",
+            "show_social_icons": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1486649858082": {
+              "type": "menu",
+              "settings": {
+                "link_list": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "1486649858082"
+          ],
+          "settings": {
+            "show_social_icons": true,
+            "show_payment_icons": true,
+            "enable_parallax": true,
+            "show_newsletter": true
+          }
+        },
+        "1476381402840": {
+          "type": "video",
+          "settings": {}
+        },
+        "1476381658595": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "image": "",
+            "alignment": "top left",
+            "text_size": "medium",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "show_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_text": "#3a3a3a",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "products": "2",
+            "rows": "6",
+            "product_tags_enable": false,
+            "product_sorting_enable": false,
+            "collection_hero_image": false,
+            "collection_hero_image_parallax": false,
+            "show_spacing": false,
+            "show_vendor": true
+          }
+        },
+        "1478026923193": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#faf9f6",
+            "image_crop": "circle",
+            "alignment": "top left",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "desktop_layout": "left",
+            "mobile_layout": "top"
+          }
+        },
+        "1478027260401": {
+          "type": "quotes",
+          "blocks": {
+            "1478027260401-0": {
+              "type": "quote",
+              "settings": {}
+            },
+            "1478027389453": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1478027260401-0",
+            "1478027389453"
+          ],
+          "settings": {
+            "color_bg": "#000000",
+            "color_text": "#ffffff",
+            "autoplay_speed": "6000"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "hide_variant_images": true,
+            "show_share_buttons": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_date": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "1486649146314": {
+              "type": "image",
+              "settings": {}
+            },
+            "1486649185448": {
+              "type": "image",
+              "settings": {}
+            },
+            "1486649208703": {
+              "type": "image",
+              "settings": {}
+            },
+            "1486649267624": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1486649146314",
+            "1486649185448",
+            "1486649208703",
+            "1486649267624"
+          ],
+          "settings": {
+            "cta": "view more",
+            "show_overlay": true,
+            "overlay_color": "#313131",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.3"
+          }
+        },
+        "1486649413883": {
+          "type": "gallery",
+          "blocks": {
+            "1486649413883-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "1486649413883-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1486649413883-0",
+            "1486649413883-1"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": true,
+            "overlay_color": "#3b3b3b",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.4"
+          }
+        },
+        "1486649522802": {
+          "type": "highlight",
+          "settings": {
+            "border_color": "#cbc8c1",
+            "content_alignment": "middle",
+            "image_position": "back",
+            "use_second_button": false
+          }
+        },
+        "1486649604878": {
+          "type": "featured-slider",
+          "blocks": {
+            "1486649604878-0": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#9d988b"
+              }
+            },
+            "1486649604878-1": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#cdcdcd"
+              }
+            },
+            "1486649604878-2": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#a7a59e"
+              }
+            },
+            "1486649769533": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#383a3c"
+              }
+            }
+          },
+          "block_order": [
+            "1486649604878-0",
+            "1486649604878-1",
+            "1486649604878-2",
+            "1486649769533"
+          ],
+          "settings": {
+            "use_second_button": false,
+            "text_color": "#ffffff",
+            "cover_title_desktop_position": "center",
+            "show_overlay": true,
+            "overlay_color": "#404040",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.2"
+          }
+        },
+        "1486649811524": {
+          "type": "featured-product",
+          "settings": {
+            "layout": "square",
+            "image_size": "cover",
+            "background_color": "transparent",
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "show_share_buttons": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "image_parallax": true,
+            "show_date": true,
+            "show_author": false,
+            "show_share_buttons": true
+          }
+        },
+        "1492806970384": {
+          "type": "custom-content",
+          "blocks": {
+            "1492806970384-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#3a3a3a",
+                "heading_style": "h4",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492806970384-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "",
+            "top_margin": true,
+            "bottom_margin": false
+          }
+        }
+      },
+      "content_for_index": [
+        "1478026923193",
+        "1476381402840",
+        "1476381658595",
+        "1486649413883",
+        "1478027260401",
+        "1492806970384",
+        "1486649522802",
+        "1486649604878",
+        "1486649811524"
+      ]
+    },
+    "Light": {
+      "color_primary": "#dfa160",
+      "color_header_text": "#dfa160",
+      "color_primary_heading_text": "#000000",
+      "color_primary_body_text": "#4a4a4a",
+      "color_footer_text": "#ffffff",
+      "color_button_text": "#ffffff",
+      "color_header_bg": "#fff",
+      "color_footer_bg": "#dfa160",
+      "color_main_bg": "#ffffff",
+      "color_secondary_bg": "#f7f7f7",
+      "color_product_cards": "#ebebeb",
+      "color_form_elements": "#f1f1f1",
+      "color_cart_flag": "#b76b50",
+      "type_base_size": "62.5%",
+      "type_header_family": "Google_Open+Sans_400_sans",
+      "type_bold_titles": true,
+      "type_base_family": "Google_Open+Sans_400_sans",
+      "show_cart_drawer": true,
+      "show_cart_note": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d",
+      "transparent_logo": "",
+      "logo_max_height": "15",
+      "sections": {
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "1486583739899": {
+              "type": "video",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1486583739899"
+          ],
+          "settings": {
+            "cta": "Shop now",
+            "show_overlay": true,
+            "overlay_color": "#ffffff",
+            "overlay_text": "#000000",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "icon": "bag",
+            "logo_max_height": "18",
+            "enable_transparent": true,
+            "transparent_text_color": "#dfa160",
+            "primary_navigation": "main-menu",
+            "secondary_navigation": "footer",
+            "show_social_icons": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1486586799558": {
+              "type": "menu",
+              "settings": {
+                "link_list": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "1486586799558"
+          ],
+          "settings": {
+            "show_social_icons": true,
+            "show_payment_icons": true,
+            "enable_parallax": true,
+            "show_newsletter": true
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#fafafa",
+            "image_crop": "square",
+            "alignment": "center center",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "desktop_layout": "left",
+            "mobile_layout": "top"
+          }
+        },
+        "gallery": {
+          "type": "gallery",
+          "blocks": {
+            "1486502632685-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "icon": "checkmark",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "1486502632685-0"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "featured-slider": {
+          "type": "featured-slider",
+          "blocks": {
+            "1486503036275-0": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": true,
+                "slide_button_text": "",
+                "slide_button_url": ""
+              }
+            },
+            "1486503036275-2": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": true,
+                "slide_button_text": "",
+                "slide_button_url": ""
+              }
+            },
+            "1486503036275-1": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": true,
+                "slide_button_text": "",
+                "slide_button_url": ""
+              }
+            },
+            "1487016418120": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": false,
+                "slide_image": "",
+                "slide_title": ""
+              }
+            }
+          },
+          "block_order": [
+            "1486503036275-0",
+            "1486503036275-2",
+            "1486503036275-1",
+            "1487016418120"
+          ],
+          "settings": {
+            "use_second_button": true,
+            "text_color": "#000000",
+            "cover_title_desktop_position": "center",
+            "show_overlay": true,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_text": "#000000",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "1486583009346": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#ffffff",
+            "image_crop": "none",
+            "alignment": "top left",
+            "use_second_button": false,
+            "button_label": "About us",
+            "desktop_layout": "right",
+            "mobile_layout": "bottom"
+          }
+        },
+        "1486584613697": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "alignment": "center center",
+            "text": "",
+            "text_size": "medium",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "show_overlay": true,
+            "overlay_color": "#ffffff",
+            "overlay_text": "#3a3a3a",
+            "overlay_opacity": "0"
+          }
+        },
+        "1486584983006": {
+          "type": "highlight",
+          "settings": {
+            "border_color": "#dfa160",
+            "content_alignment": "middle",
+            "image_position": "back",
+            "use_second_button": false,
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "products": "2",
+            "rows": "6",
+            "product_tags_enable": false,
+            "product_sorting_enable": true,
+            "collection_hero_image": true,
+            "collection_hero_image_parallax": true,
+            "show_spacing": false,
+            "show_vendor": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": true,
+            "hide_variant_images": true,
+            "show_share_buttons": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_date": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "image_parallax": true,
+            "show_date": true,
+            "show_author": false,
+            "show_share_buttons": true
+          }
+        },
+        "1492008725684": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "x-large",
+            "alignment": "top center",
+            "title": "",
+            "text": "",
+            "text_size": "medium",
+            "use_second_button": false,
+            "button_label": "Read our blog",
+            "show_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_text": "#3a3a3a",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "1492807242211": {
+          "type": "custom-content",
+          "blocks": {
+            "1492807242211-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#3a3a3a",
+                "heading_style": "h3",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492807242211-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "",
+            "top_margin": true,
+            "bottom_margin": false
+          }
+        }
+      },
+      "content_for_index": [
+        "feature-row",
+        "1486584613697",
+        "1486583009346",
+        "gallery",
+        "1492807242211",
+        "1486584983006",
+        "featured-slider",
+        "1492008725684"
+      ]
+    },
+    "Cold": {
+      "color_primary": "#00b490",
+      "color_header_text": "#00b490",
+      "color_primary_heading_text": "#ffffff",
+      "color_primary_body_text": "#a9a9a9",
+      "color_footer_text": "#000000",
+      "color_button_text": "#000000",
+      "color_header_bg": "#191c1b",
+      "color_footer_bg": "#00b490",
+      "color_main_bg": "#000000",
+      "color_secondary_bg": "#191c1b",
+      "color_product_cards": "#191c1b",
+      "color_form_elements": "#292c2b",
+      "color_cart_flag": "#ffffff",
+      "type_base_size": "62.5%",
+      "type_header_family": "Google_Titillium+Web_400_sans",
+      "type_bold_titles": true,
+      "type_base_family": "Google_Lato_400_sans",
+      "show_cart_drawer": true,
+      "show_cart_note": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d",
+      "transparent_logo": "",
+      "logo_max_height": "15",
+      "sections": {
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "1486663529263": {
+              "type": "video",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1486663529263"
+          ],
+          "settings": {
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.6"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "icon": "cart",
+            "logo_max_height": "16",
+            "enable_transparent": true,
+            "transparent_text_color": "#00b490",
+            "primary_navigation": "main-menu",
+            "secondary_navigation": "footer",
+            "show_social_icons": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1486664283354": {
+              "type": "menu",
+              "settings": {
+                "link_list": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "1486664283354"
+          ],
+          "settings": {
+            "show_social_icons": true,
+            "show_payment_icons": true,
+            "enable_parallax": true,
+            "show_newsletter": true,
+            "newsletter_heading": "Sign up for updates",
+            "newsletter_button": "Ok"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#191c1b",
+            "image_crop": "circle",
+            "alignment": "center center",
+            "use_second_button": false,
+            "desktop_layout": "left",
+            "mobile_layout": "top"
+          }
+        },
+        "gallery": {
+          "type": "gallery",
+          "blocks": {
+            "1486502632685-0": {
+              "type": "image",
+              "settings": {
+                "icon": "checkmark"
+              }
+            },
+            "1486502639654": {
+              "type": "image",
+              "settings": {
+                "icon": "checkmark"
+              }
+            },
+            "1486502643820": {
+              "type": "image",
+              "settings": {
+                "icon": "checkmark"
+              }
+            }
+          },
+          "block_order": [
+            "1486502632685-0",
+            "1486502639654",
+            "1486502643820"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "featured-slider": {
+          "type": "featured-slider",
+          "blocks": {
+            "1486503036275-0": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#464f4e",
+                "show_image": true,
+                "slide_button_text": "View"
+              }
+            },
+            "1486503036275-1": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#464f4e",
+                "show_image": true,
+                "slide_button_text": "View"
+              }
+            }
+          },
+          "block_order": [
+            "1486503036275-0",
+            "1486503036275-1"
+          ],
+          "settings": {
+            "use_second_button": true,
+            "text_color": "#ffffff",
+            "cover_title_desktop_position": "center",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "show_view_all": true
+          }
+        },
+        "1486664864970": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "alignment": "top center",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "show_overlay": true,
+            "overlay_color": "#00b490",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0"
+          }
+        },
+        "1486665151632": {
+          "type": "highlight",
+          "settings": {
+            "border_color": "#00b490",
+            "content_alignment": "middle",
+            "image_position": "back",
+            "use_second_button": true
+          }
+        },
+        "1486665428106": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "",
+            "image_crop": "none",
+            "alignment": "top left",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "desktop_layout": "right",
+            "mobile_layout": "bottom"
+          }
+        },
+        "1486665657092": {
+          "type": "gallery",
+          "blocks": {
+            "1486665657092-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "icon": "none",
+                "cta_label": "",
+                "link": ""
+              }
+            },
+            "1486665657092-1": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "icon": "none",
+                "cta_label": "",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "1486665657092-0",
+            "1486665657092-1"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.3"
+          }
+        },
+        "1486665735205": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "medium",
+            "alignment": "center center",
+            "title": "",
+            "text_size": "large",
+            "use_second_button": true,
+            "button_label": "about us",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": true,
+            "hide_variant_images": true,
+            "show_share_buttons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "products": "2",
+            "rows": "4",
+            "product_tags_enable": false,
+            "product_sorting_enable": false,
+            "collection_hero_image": false,
+            "collection_hero_image_parallax": false,
+            "show_spacing": false,
+            "show_vendor": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_date": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "image_parallax": false,
+            "show_date": true,
+            "show_author": false,
+            "show_share_buttons": true
+          }
+        },
+        "1492804742195": {
+          "type": "custom-content",
+          "blocks": {
+            "1492804742195-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#3a3a3a",
+                "heading_style": "h3",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492804742195-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "#00b490",
+            "top_margin": true,
+            "bottom_margin": true
+          }
+        },
+        "1492805123317": {
+          "type": "custom-content",
+          "blocks": {
+            "1492805123317-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#ffffff",
+                "heading_style": "h3",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492805123317-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "",
+            "top_margin": true,
+            "bottom_margin": false
+          }
+        }
+      },
+      "content_for_index": [
+        "feature-row",
+        "1492804742195",
+        "1486664864970",
+        "gallery",
+        "1492805123317",
+        "1486665151632",
+        "1486665428106",
+        "1486665657092",
+        "1486665735205",
+        "featured-slider",
+        "featured-collection"
+      ]
+    }
+  }
+}

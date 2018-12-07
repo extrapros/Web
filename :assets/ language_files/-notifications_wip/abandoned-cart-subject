@@ -1,0 +1,8 @@
+{% case attributes.language %}
+{% when 'ly62139' %}
+You can still complete your purchase!
+{% when 'ly64999' %}
+TEXT FOR Danish HERE
+{% else %}
+Du kan fortfarande slutföra ditt köp!
+{% endcase %}

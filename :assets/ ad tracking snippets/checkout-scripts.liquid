@@ -1,0 +1,77 @@
+<!-- Event snippet for Genomförda Köp conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-798093218/t4r_CPGHnYcBEKLfx_wC',
+      'value': 0.0,
+      'currency': 'SEK',
+      'transaction_id': ''
+  });
+</script>
+<!--
+Event snippet for Vagivital_Sale_Conversion on https://vagivital.se: Please do not remove.
+Place this snippet on pages with events you’re tracking. 
+Creation date: 10/17/2018
+-->
+<script>
+  gtag('event', 'purchase', {
+    'allow_custom_scripts': true,
+    'value': '[Revenue]',
+    'transaction_id': '[OrderID]',
+    'u2': '[Sales]',
+    'send_to': 'DC-8983969/vagiv00/vagiv0+transactions'
+  });
+</script>
+<noscript>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8983969;type=vagiv00;cat=vagiv0;qty=1;cost=[Revenue];u2=[Sales];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=[OrderID]?" width="1" height="1" alt=""/>
+</noscript>
+<!-- End of event snippet: Please do not remove -->
+<script type="text/javascript" src="https://track.adform.net/serving/scripts/trackpoint/"></script>
+<!-- Adform Tracking Code BEGIN -->
+<script type="text/javascript">
+    window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+    window._adftrack.push({
+        pm: 1511687,
+        divider: encodeURIComponent('|'),
+        pagename: encodeURIComponent('vagivital.se|Checkout'),
+        order : { 
+             itms: [{ 
+                 productname: '{{ product.title }}',
+                 productsales: '{{ product.id }}'
+             }]
+        }
+    });
+    (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+</script>
+<noscript>
+    <p style="margin:0;padding:0;border:0;">
+        <img src="https://track.adform.net/Serving/TrackPoint/?pm=1511687&ADFPageName=vagivital.se%7CCheckout&ADFdivider=|" width="1" height="1" alt="" />
+    </p>
+</noscript>
+<!-- Adform Tracking Code END -->
+<!-- Adform Tracking Code BEGIN -->
+  <script type="text/javascript">
+      window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+      window._adftrack.push({
+          pm: 1511687,
+          divider: encodeURIComponent('|'),
+          pagename: encodeURIComponent('vagivital.se|Conversion page'),
+          order : { 
+               sales: '{{ total_price | money_without_currency }}',
+               orderid: '{{ order_number }}',
+               itms: [{ 
+                   productname: '{{ product.title }}',
+                   productid: '{{ product.id }}',
+                   step: 'checkout'
+               }]
+          }
+      });
+      (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+  </script>
+  <noscript>
+      <p style="margin:0;padding:0;border:0;">
+          <img src="https://track.adform.net/Serving/TrackPoint/?pm=1511687&ADFPageName=vagivital.se%7CConversion%20page&ADFdivider=|" width="1" height="1" alt="" />
+      </p>
+  </noscript>
+  <!-- Adform Tracking Code END -->

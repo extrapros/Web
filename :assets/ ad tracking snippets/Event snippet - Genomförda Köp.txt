@@ -1,0 +1,7 @@
+<!-- Event snippet for Genomförda Köp conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-798093218/t4r_CPGHnYcBEKLfx_wC',
+      'transaction_id': ''
+  });
+</script>

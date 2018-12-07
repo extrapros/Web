@@ -1,0 +1,56 @@
+----------------------------------------------------------------------------------------------
+Tracking Code: Standard (Asynchronous) "vagivital.se|Product page"
+Insert the code below on: https://vagivital.se/products/produkt-vagivital
+----------------------------------------------------------------------------------------------
+
+<!-- Adform Tracking Code BEGIN -->
+<script type="text/javascript">
+    window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+    window._adftrack.push({
+        pm: 1511687,
+        divider: encodeURIComponent('|'),
+        pagename: encodeURIComponent('vagivital.se|Product page'),
+        order : { 
+             itms: [{ 
+                 productname: '<insert product name value here>',
+                 productsales: '<insert product sales value here>'
+             }]
+        }
+    });
+    (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+</script>
+<noscript>
+    <p style="margin:0;padding:0;border:0;">
+        <img src="https://track.adform.net/Serving/TrackPoint/?pm=1511687&ADFPageName=vagivital.se%7CProduct%20page&ADFdivider=|" width="1" height="1" alt="" />
+    </p>
+</noscript>
+<!-- Adform Tracking Code END -->
+
+----------------------------------------------------------------------------------------------
+Tracking Code: Standard (Asynchronous) "vagivital.se|Checkout"
+----------------------------------------------------------------------------------------------
+
+<!-- Adform Tracking Code BEGIN -->
+<script type="text/javascript">
+    window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+    window._adftrack.push({
+        pm: 1511687,
+        divider: encodeURIComponent('|'),
+        pagename: encodeURIComponent('vagivital.se|Checkout'),
+        order : { 
+             itms: [{ 
+                 productname: '<insert product name value here>',
+                 productsales: '<insert product sales value here>'
+             }]
+        }
+    });
+    (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+</script>
+<noscript>
+    <p style="margin:0;padding:0;border:0;">
+        <img src="https://track.adform.net/Serving/TrackPoint/?pm=1511687&ADFPageName=vagivital.se%7CCheckout&ADFdivider=|" width="1" height="1" alt="" />
+    </p>
+</noscript>
+<!-- Adform Tracking Code END -->

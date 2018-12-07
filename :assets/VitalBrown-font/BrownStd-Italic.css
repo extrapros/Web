@@ -1,0 +1,12 @@
+/* Webfont: BrownStd-Italic */@font-face {
+    font-family: 'BrownStd';
+    src: url('BrownStd-Italic.eot'); /* IE9 Compat Modes */
+    src: url('BrownStd-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('BrownStd-Italic.woff') format('woff'), /* Modern Browsers */
+         url('BrownStd-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('BrownStd-Italic.svg#BrownStd-Italic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

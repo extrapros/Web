@@ -1,0 +1,12 @@
+/* Webfont: BrownStd-Bold */@font-face {
+    font-family: 'BrownStd';
+    src: url('BrownStd-Bold.eot'); /* IE9 Compat Modes */
+    src: url('BrownStd-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('BrownStd-Bold.woff') format('woff'), /* Modern Browsers */
+         url('BrownStd-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('BrownStd-Bold.svg#BrownStd-Bold') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

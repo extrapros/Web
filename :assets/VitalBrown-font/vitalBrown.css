@@ -1,0 +1,12 @@
+/* Webfont: BrownStd-Regular */@font-face {
+    font-family: 'VitalBrown';
+    src: url('VitalBrown-Regular.eot'); /* IE9 Compat Modes */
+    src: url('VitalBrown-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('VitalBrown-Regular.woff') format('woff'), /* Modern Browsers */
+         url('VitalBrown-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('VitalBrown-Regular.svg#VitalBrown-Regular') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

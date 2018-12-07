@@ -1,0 +1,29 @@
+<div class="custom-content-wrapper--top-margin custom-content-wrapper--bottom-margin">
+{{ section.settings.text-box }}
+</div>
+
+{% schema %}
+  {
+    "name": "Text Box",
+    "settings": [
+      {
+        "id": "text-box",
+        "type": "textarea",
+        "label": "Custom HTML",
+        "default": "add html code here"
+      }
+    ],
+    "presets": [
+    {
+      "name": "Custom HTML",
+      "category": "Advanced layout"
+    }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
