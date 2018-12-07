@@ -96,7 +96,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5{ font-weight: bold;}
 
 /*================ Custom Input Arrows ================*/
 input[type=number] { padding: 10px 2px;}
-input[type=number]::-webkit-inner-spin-button { 
+input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     cursor:pointer;
     display:block;
@@ -109,11 +109,11 @@ input[type=number]::-webkit-inner-spin-button {
     padding: 4px;
     position: relative;
     right: 4px;
-    background: #fff url('{{ 'arrows.png' | asset_url }}') no-repeat 50% 50%; 
+    background: #fff url('{{ 'arrows.png' | asset_url }}') no-repeat 50% 50%;
     background-size: 50%;
 }
 
-// input[type=number]:hover::-webkit-inner-spin-button {  
+// input[type=number]:hover::-webkit-inner-spin-button {
 //     width: 14px;
 //     height: 14px;
 //     padding: 4px;
@@ -124,7 +124,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 /*================ Navigation ================*/
 .navigation__link a{ color: $settings-color-primary;}
-nav.desktop-nav{ 
+nav.desktop-nav{
     ul.desktop-main-nav li a{ color: $settings-color-primary; @include transition(.3s);}
     ul.desktop-main-nav li a:hover{ color: $dk-purple; }
 }
@@ -168,10 +168,10 @@ div.site-header--fixed{ background-color: #fff;}
 .rich-text.special-color{  background-color: #F7F7F7;
 	h2, p{ color: $settings-color-primary;}
 }
-.custom-content-wrapper.special-color{ background-color: $settings-color-secondary-bg; 
+.custom-content-wrapper.special-color{ background-color: $settings-color-secondary-bg;
 	h2.custom__block-heading-text, p{ color: $settings-color-primary!important;}
 }
-//Turned off animated line -- 
+//Turned off animated line --
 /*.rich-text__heading.has-animated::after, .supports-no-js .rich-text__heading::after, .animations--disabled .rich-text__heading::after{ width: 80px;}
 .rich-text__heading::after{ content: ''; display: block; width: 0; height: 6px; margin: 30px auto 30px; background-color: $settings-color-primary; transition: width 0.5s ease-out; }*/
 .rich-text__heading::before{ height:0; margin-bottom:0; display: none;}
@@ -180,19 +180,19 @@ div.site-header--fixed{ background-color: #fff;}
 
 /*================ Image w/ Text ================*/
 .feature-row { text-align: center;
-    .feature-row__text{ color:#fff; 
+    .feature-row__text{ color:#fff;
         h2{ color: #fff; }
     }
     .feature-row__heading.has-animated::before, .supports-no-js .feature-row__heading::before, .animations--disabled .feature-row__heading::before{ display:none; width:0; }
 }
-.hero .hero__inner .text-center{ color: #fff; 
+.hero .hero__inner .text-center{ color: #fff;
     h2 { color: #fff; }
     .hero__overlay-title.has-animated::before, .supports-no-js .hero__overlay-title::before, .animations--disabled .hero__overlay-title::before{ display: none; }
-    .img-stack { display: inline-block; margin:30px 55px; 
+    .img-stack { display: inline-block; margin:30px 55px;
         img{ height: 80px; }
      }
 }
-.hero.custom-ce.hero--medium{ 
+.hero.custom-ce.hero--medium{
     .hero__inner{ padding: 140px 0 90px 0; }
 }
 
@@ -272,6 +272,9 @@ span.tax-mssg{ letter-spacing: .02rem; font-size: 1.2rem; font-style:italic;}
 }
 .social-links__icon svg, .social-links .icon{ fill:#fff;}
 .site-footer__newsletter-message .form-success{ color:$settings-color-secondary-bg; pading-top:30px; text-align: left;}
+.currency-picker__wrapper{float: left; margin-top: 20px;}
+.currency-picker__label{ color: #fff; margin-right:10px;}
+.currency-picker{color: $settings-color-primary;}
 
 
 /*================ Custom-About ================*/
@@ -341,7 +344,7 @@ body.password-template{ background-color:$settings-color-secondary-bg;
     }
     .site-header--transparent.site-header--homepage.site-header--fixed{
         nav.desktop-nav li a{ color: $settings-color-primary; @include transition(.3s); }
-        nav.desktop-nav li a:hover{ color: $dk-purple!important; } 
+        nav.desktop-nav li a:hover{ color: $dk-purple!important; }
     }
     .slideshow__text-content h1{ width: 30%;}
 }
