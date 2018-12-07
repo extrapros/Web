@@ -52,7 +52,6 @@ Lösenord:                               V-Peptonic2018
 - Open terminal
 - Go to folder with theme files using the cd command
     + cd /Users/williamalbright/Öström\ Studio\ Dropbox/Projekt/VAGIVITAL/Web
-    +
 - run "theme watch" command
 - make changes and save / see if they update
 
